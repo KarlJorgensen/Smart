@@ -13,7 +13,7 @@
 #define FACE_CENTER_X 100
 #define FACE_CENTER_Y 100
 
-// This is the _outer_ radius.
+// Outer radius of the clock face - in pixels
 //
 // Depending on the size of the screen and placement, this may cause
 // parts of the face to not fit on screen.
@@ -26,22 +26,23 @@
 // of the watch face) will "touch" this (imaginary) circle
 #define MARKER_OUTER_RADIUS (FACE_RADIUS - 2)
 
-// Individual hour markers are filled circles with this radius
+// 3-hour markers & 5-minute markers are filled circles with this radius
 #define MARKER_MAJOR_HOUR_RADIUS 7
 #define MARKER_MINOR_HOUR_RADIUS 4
-#define MARKER_MINUTE_RADIUS 1
+// 1-minute markers are lines of this length
+#define MARKER_MINUTE_LENGTH (2 * MARKER_MAJOR_HOUR_RADIUS)
 
 // The centre of the watch face is a filled circle.
 // Set to zero to disable
 #define CENTRE_COVER_RADIUS MARKER_MAJOR_HOUR_RADIUS
 
 // The hands will stay within a circle of this radius
-#define HANDS_RADIUS (MARKER_OUTER_RADIUS - MARKER_MINOR_HOUR_RADIUS - 1)
+#define HANDS_RADIUS (MARKER_OUTER_RADIUS - MARKER_MAJOR_HOUR_RADIUS)
 
 // Whether we want thick lines
 #define THICK_LINES true
 
-int minute2angle(uint minute) {
+int minute2angle(int minute) {
   return 6 * (minute - 15);
 }
 
@@ -65,6 +66,8 @@ void Smart::drawWatchFace(){
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS, FOREGROUND);
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS-1, FOREGROUND);
 
+  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS - MARKER_MINUTE_LENGTH, FOREGROUND);
+
   drawOuterMarks();
   drawHourHand();
   drawMinuteHand();
@@ -81,16 +84,22 @@ void Smart::drawWatchFace(){
 void Smart::drawOuterMarks(){
   for (int minute=0;
        minute < 60;
-       minute += (MARKER_MINUTE_RADIUS ? 1 : 15)
+       minute += (MARKER_MINUTE_LENGTH ? 1 : 15)
        ) {
     if ((minute % 15) == 0) {
       drawOuterMark(minute2angle(minute), MARKER_MAJOR_HOUR_RADIUS);
     } else if ((minute % 5) == 0) {
       drawOuterMark(minute2angle(minute), MARKER_MINOR_HOUR_RADIUS);
     }
-#if MARKER_MINUTE_RADIUS
+#if MARKER_MINUTE_LENGTH
     else {
-      drawOuterMark(minute2angle(minute), MARKER_MINUTE_RADIUS);
+      float radians = PI * minute2angle(minute) / 180;
+      float cosval = cos(radians), sinval = sin(radians);
+      display.drawLine(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH),
+		       FACE_CENTER_Y + sinval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH),
+		       FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS),
+		       FACE_CENTER_X + sinval * (MARKER_OUTER_RADIUS),
+		       FOREGROUND);
     }
 #endif
   }
