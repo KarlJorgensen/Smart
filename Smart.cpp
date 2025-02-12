@@ -66,9 +66,14 @@ void Smart::drawWatchFace(){
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS, FOREGROUND);
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS-1, FOREGROUND);
 
-  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS - MARKER_MINUTE_LENGTH, FOREGROUND);
-
   drawOuterMarks();
+
+  // A thin circle slightly inside the outside border of the face.
+  //
+  // This makes it appear that the hour/minute marks are inside a "band"
+  // along the edge of the watch face.
+  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS - MARKER_MINUTE_LENGTH - 1, FOREGROUND);
+
   drawHourHand();
   drawMinuteHand();
 
@@ -124,7 +129,6 @@ void Smart::drawTime(){
   char time[10];
   sprintf(time, "%02d:%02d", currentTime.Hour, currentTime.Minute);
   display.println(time);
-
 }
 
 /*
