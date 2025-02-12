@@ -90,22 +90,37 @@ def main():
                         cmd = next(i)
                     continue
 
+                if cmd == 'C':
+                    # Cubic Bezier curve - given in absolute format.
+                    #
+                    # We expect:
+                    #   C x1 y1, x2 y2, x y
+                    #
+                    # We don't _really_ do curves. So we ignore the
+                    # control points and just pick the end point.
+                    _c1 = get_coords()
+                    _c2 = get_coords()
+                    x, y = get_coords()
+                    addpoint(x, y)
+                    # print(f'// c(a) {points=}')
+
+                    cmd = next(i)
+                    while isfloat(cmd):
+                        _c1y = next(i)
+                        _c2 = get_coords()
+                        x, y = get_coords()
+                        addpoint(x, y)
+                        # print(f'// c(b) {points=}')
+                        cmd = next(i)
+                    continue
+
                 if cmd == 'z':
                     # Close the loop
                     addpoint(points[0][0], points[0][1])
                     cmd = next(i).lower()
                     break
 
-                # just a point?
-                x, y = cmd.split(',')
-                try:
-                    x = float(x)
-                    y = float(y)
-                except ValueError:
-                    raise ValueError(f'Unknown cmd {cmd}')
-                addpoint(x,y)
-
-                cmd = next(i).lower()
+                raise ValueError(f'Now sure how to handle {cmd=}')
 
         except StopIteration:
             pass
