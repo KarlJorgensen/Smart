@@ -4,8 +4,10 @@
 BUILD_PATH = /tmp/build
 BUILD_CACHE = /tmp/cache
 
+SVG_HEADERS = hour_hand.h minute_hand.h
+
 .PHONY: compile
-compile: dirs
+compile: dirs $(SVG_HEADERS)
 	arduino --upload \
 		--pref build.path=$(BUILD_PATH) \
 		--pref build.cache=$(BUILD_CACHE) \
@@ -13,7 +15,7 @@ compile: dirs
 		$(wildcard *.ino)
 
 .PHONY: upload
-upload: dirs
+upload: dirs $(SVG_HEADERS)
 	arduino --upload \
 		--pref build.path=$(BUILD_PATH) \
 		--pref build.cache=$(BUILD_CACHE) \
@@ -29,3 +31,12 @@ $(BUILD_PATH)/.stamp :
  $(BUILD_CACHE)/.stamp :
 	mkdir --parents $(dir $@)
 	touch $@
+
+%.h : %.svg svg2multiline.py
+	rm -f $@.new
+	./svg2multiline.py $< > $@.new
+	chmod -w $@.new
+	mv --force $@.new $@
+
+.PHONY: headers
+headers : $(SVG_HEADERS)

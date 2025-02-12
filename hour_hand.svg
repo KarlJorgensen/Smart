@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg4386"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="hour_hand.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4388"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     shape-rendering="crispEdges"
+     showguides="true"
+     inkscape:lockguides="false"
+     inkscape:zoom="8.6775897"
+     inkscape:cx="129.0681"
+     inkscape:cy="103.48496"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4390"
+       spacingx="2"
+       spacingy="2"
+       color="#0000ff"
+       opacity="0.35686275"
+       dotted="false"
+       snapvisiblegridlinesonly="true"
+       originx="0"
+       originy="0"
+       empspacing="10"
+       empcolor="#0000ff"
+       empopacity="0.49803922" />
+    <sodipodi:guide
+       position="100,120"
+       orientation="1,0"
+       id="guide4408"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="60,100"
+       orientation="0,-1"
+       id="guide5136"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4383">
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect5174"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,0"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect243"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,0"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:#000000;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.810741"
+       d="m 84.000012,100 c 2.679491,-1.607695 6.07695,-3.646171 9.999998,-6 10.35782,0 21.79324,0 33.99997,0 3.17656,-3.176543 6.53069,-6.530674 10.00002,-10 3.89924,0 7.91975,0 11.99999,0 6.60407,5.283252 13.30204,10.641626 20.00001,16 -6.69797,5.35837 -13.39594,10.71675 -20,16 -4.08025,0 -8.10076,0 -12,0 -3.46933,-3.46933 -6.82346,-6.82346 -10,-10 -12.20675,0 -23.64217,0 -34,0 -3.923044,-2.35383 -7.320499,-4.3923 -9.999988,-6 z m 0,0 c 2.679489,1.6077 6.076944,3.64617 9.999988,6 10.35783,0 21.79325,0 33.99998,0 3.17656,3.17654 6.53069,6.53067 10.00002,10 3.89924,0 7.91975,0 11.99999,0 6.60407,-5.28325 13.30204,-10.64163 20.00001,-16 -6.69797,-5.358374 -13.39594,-10.716748 -20,-16 -4.08025,0 -8.10076,0 -12,0 -3.46933,3.469326 -6.82346,6.823457 -10,10 -12.20675,0 -23.64217,0 -33.99999,0 -3.923048,2.353829 -7.320507,4.392305 -9.999998,6 z"
+       id="hour_hand"
+       inkscape:path-effect="#path-effect5174"
+       inkscape:original-d="M 84.000012,100 94.00001,94 H 128 l 10,-10 h 12 l 20,16 -20,16 H 138 L 128,106 H 94 Z"
+       sodipodi:nodetypes="ccccccccccc" />
+  </g>
+</svg>

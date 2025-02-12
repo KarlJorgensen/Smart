@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg4386"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="minute_hand.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4388"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     shape-rendering="crispEdges"
+     showguides="true"
+     inkscape:lockguides="false"
+     inkscape:zoom="8.4389872"
+     inkscape:cx="115.65369"
+     inkscape:cy="116.83867"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4390"
+       spacingx="2"
+       spacingy="2"
+       color="#0000ff"
+       opacity="0.35686275"
+       dotted="false"
+       snapvisiblegridlinesonly="true"
+       originx="0"
+       originy="0"
+       empspacing="10"
+       empcolor="#0000ff"
+       empopacity="0.49803922" />
+    <sodipodi:guide
+       position="100,120"
+       orientation="1,0"
+       id="guide4408"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="60,100"
+       orientation="0,-1"
+       id="guide5136"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4383">
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect5174"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,0"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect243"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,0"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:#000000;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.810741"
+       d="m 74.000012,100 c 2.679491,-1.071797 6.07695,-2.430781 9.999998,-4 19.49708,0 41.02258,0 63.99996,0 3.17657,-1.905926 6.5307,-3.918405 10.00003,-6 3.89924,0 7.91975,0 11.99999,0 6.60407,3.302032 13.30204,6.651016 20.00001,10 -6.69797,3.34898 -13.39594,6.69797 -20,10 -4.08025,0 -8.10076,0 -12,0 -3.46933,-2.0816 -6.82346,-4.09407 -10,-6 -22.97741,0 -44.50292,0 -64,0 -3.923044,-1.56922 -7.320499,-2.9282 -9.999988,-4 z m 0,0 c 2.679489,1.0718 6.076944,2.43078 9.999988,4 19.49708,0 41.02259,0 63.99997,0 3.17657,1.90593 6.5307,3.9184 10.00003,6 3.89924,0 7.91975,0 11.99999,0 6.60407,-3.30203 13.30204,-6.65102 20.00001,-10 -6.69797,-3.348984 -13.39594,-6.697968 -20,-10 -4.08025,0 -8.10076,0 -12,0 -3.46933,2.081595 -6.82346,4.094074 -10,6 -22.97741,0 -44.50291,0 -63.99999,0 -3.923048,1.569219 -7.320507,2.928203 -9.999998,4 z"
+       id="minute_hand"
+       inkscape:path-effect="#path-effect5174"
+       inkscape:original-d="M 74.000012,100 84.00001,96 H 148 l 10,-6 h 12 l 20,10 -20,10 h -12 l -10,-6 H 84 Z"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:label="minute_hand" />
+  </g>
+</svg>

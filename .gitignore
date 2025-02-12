@@ -1,0 +1,15 @@
+# Emacs temp files
+*~
+\#*
+*\#
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+.*.stamp
+
+# Generated from svgs
+hour_hand.h
+minute_hand.h

@@ -4,6 +4,7 @@
 Smart watchy(settings);
 
 void setup(){
+  Serial.begin(9600);
   watchy.init();
 }
 
