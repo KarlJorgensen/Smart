@@ -22,13 +22,14 @@ upload: dirs $(SVG_HEADERS)
 		--pref update.check=false \
 		$(wildcard *.ino)
 
+.PHONY: dirs
 dirs: $(BUILD_PATH)/.stamp $(BUILD_CACHE)/.stamp
 
 $(BUILD_PATH)/.stamp :
 	mkdir --parents $(dir $@)
 	touch $@
 
- $(BUILD_CACHE)/.stamp :
+$(BUILD_CACHE)/.stamp :
 	mkdir --parents $(dir $@)
 	touch $@
 
