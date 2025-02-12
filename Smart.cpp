@@ -95,10 +95,10 @@ void Smart::drawOuterMarks(){
     else {
       float radians = PI * minute2angle(minute) / 180;
       float cosval = cos(radians), sinval = sin(radians);
-      display.drawLine(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH),
-		       FACE_CENTER_Y + sinval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH),
-		       FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS),
-		       FACE_CENTER_X + sinval * (MARKER_OUTER_RADIUS),
+      display.drawLine(round(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH)),
+		       round(FACE_CENTER_Y + sinval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH)),
+		       round(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS)),
+		       round(FACE_CENTER_X + sinval * (MARKER_OUTER_RADIUS)),
 		       FOREGROUND);
     }
 #endif
@@ -111,8 +111,8 @@ void Smart::drawOuterMark(int angle, int pixels){
   float cosval = cos(radians);
   float sinval = sin(radians);
 
-  display.fillCircle(FACE_CENTER_X + (uint16_t)((MARKER_OUTER_RADIUS - pixels) * cosval),
-		     FACE_CENTER_Y + (uint16_t)((MARKER_OUTER_RADIUS - pixels) * sinval),
+  display.fillCircle(round(FACE_CENTER_X + (MARKER_OUTER_RADIUS - pixels) * cosval),
+		     round(FACE_CENTER_Y + (MARKER_OUTER_RADIUS - pixels) * sinval),
 		     pixels,
 		     FOREGROUND);
 }
@@ -164,8 +164,8 @@ void Smart::drawMultiLine(const float *line , uint numPoints, float angle) {
   float cosval = cos(radians);
   float sinval = sin(radians);
 
-#define ROTX (int)( FACE_CENTER_X + ((cosval * line[0]) - (sinval * line[1])) )
-#define ROTY (int)( FACE_CENTER_Y + ((sinval * line[0]) + (cosval * line[1])) )
+#define ROTX round( FACE_CENTER_X + ((cosval * line[0]) - (sinval * line[1])) )
+#define ROTY round( FACE_CENTER_Y + ((sinval * line[0]) + (cosval * line[1])) )
 
   int last_x = ROTX;
   int last_y = ROTY;
