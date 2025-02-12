@@ -36,7 +36,7 @@
 #define CENTRE_COVER_RADIUS MARKER_MAJOR_HOUR_RADIUS
 
 // The hands will stay within a circle of this radius
-#define HANDS_RADIUS (MARKER_OUTER_RADIUS - MARKER_MINOR_HOUR_RADIUS)
+#define HANDS_RADIUS (MARKER_OUTER_RADIUS - MARKER_MINOR_HOUR_RADIUS - 1)
 
 // Whether we want thick lines
 #define THICK_LINES true
@@ -61,7 +61,7 @@ void Smart::drawWatchFace(){
   // drawTime();
 
   // A thick circle for the outside border of the face
-  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS+1, FOREGROUND);
+  // display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS+1, FOREGROUND);
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS, FOREGROUND);
   display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS-1, FOREGROUND);
 
