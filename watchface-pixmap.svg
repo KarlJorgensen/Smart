@@ -30,15 +30,15 @@
      showgrid="true"
      shape-rendering="crispEdges"
      showguides="true"
-     inkscape:zoom="3.9405941"
-     inkscape:cx="99.984924"
-     inkscape:cy="99.984924"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="0"
+     inkscape:zoom="4.92"
+     inkscape:cx="100"
+     inkscape:cy="103.45528"
+     inkscape:window-width="1080"
+     inkscape:window-height="1851"
+     inkscape:window-x="1920"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="g26401">
     <inkscape:grid
        type="xygrid"
        id="grid25"
@@ -536,7 +536,8 @@
        height="200"
        x="0"
        y="0"
-       inkscape:label="background" />
+       inkscape:label="background"
+       sodipodi:insensitive="true" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9212)"
        id="path129"
@@ -550,9 +551,10 @@
        sodipodi:open="true"
        sodipodi:arc-type="arc"
        d="M 7.2510462e-5,99.879575 A 100,100 0 0 1 100.11868,7.0424278e-5 100,100 0 0 1 199.99993,100.11693 100,100 0 0 1 99.88481,199.99993 100,100 0 0 1 6.4348426e-5,99.886555"
-       inkscape:label="outercircle" />
+       inkscape:label="outercircle"
+       sodipodi:insensitive="true" />
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25,2.25;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208);stroke-dashoffset:0;fill-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
        id="path912"
        sodipodi:type="arc"
        sodipodi:cx="100"
@@ -564,7 +566,8 @@
        sodipodi:open="true"
        sodipodi:arc-type="arc"
        d="M 15.000062,99.897639 A 85,85 0 0 1 100.10088,15.00006 85,85 0 0 1 184.99994,100.09939 85,85 0 0 1 99.902089,184.99994 85,85 0 0 1 15.000055,99.903572"
-       inkscape:label="innercircle" />
+       inkscape:label="innercircle"
+       sodipodi:insensitive="true" />
     <g
        id="g9777"
        inkscape:label="MajorHourMarkers">
@@ -579,14 +582,14 @@
          sodipodi:nodetypes="cccc"
          inkscape:label="marker-12" />
       <path
-         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9200)"
-         d="m 198.0703,95.087719 c -3.23327,1.077757 -8.78966,2.929888 -15,5.000001 4.86617,1.62206 10.13383,3.37794 15,5 0,-4.14023 0,-7.844487 0,-10.000001 z m 0,0 c 0,2.155514 0,5.859771 0,10.000001 -4.86617,-1.62206 -10.13383,-3.37794 -15,-5 6.21034,-2.070113 11.76673,-3.922244 15,-5.000001 z"
-         id="path2530"
-         inkscape:path-effect="#path-effect2534"
-         inkscape:original-d="m 198.0703,95.087719 -15,5.000001 15,5 z"
-         inkscape:transform-center-x="-90.579009"
-         inkscape:transform-center-y="0.0087095"
-         inkscape:label="marker-3" />
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9192)"
+         d="m 1.912281,105.0703 c 3.2332708,-1.07776 8.789662,-2.92989 15,-5 -4.866166,-1.622055 -10.1338336,-3.377945 -15,-5 0,4.140226 0,7.84449 0,10 z m 0,0 c 0,-2.15551 0,-5.859774 0,-10 4.8661664,1.622055 10.133834,3.377945 15,5 -6.210338,2.07011 -11.7667292,3.92224 -15,5 z"
+         id="path2542"
+         inkscape:path-effect="#path-effect2546"
+         inkscape:original-d="m 1.912281,105.0703 15,-5 -15,-5 z"
+         inkscape:transform-center-x="90.57901"
+         inkscape:transform-center-y="-0.00871"
+         inkscape:label="marker-9" />
       <path
          style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9196)"
          d="m 104.98258,198.15802 c -1.07776,-3.23327 -2.92989,-8.78966 -4.999999,-15 -1.622055,4.86617 -3.377945,10.13383 -5,15 4.140225,0 7.844489,0 9.999999,0 z m 0,0 c -2.15551,0 -5.859774,0 -9.999999,0 1.622055,-4.86617 3.377945,-10.13383 5,-15 2.070109,6.21034 3.922239,11.76673 4.999999,15 z"
@@ -597,14 +600,14 @@
          inkscape:transform-center-y="90.57901"
          inkscape:label="marker-6" />
       <path
-         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9192)"
-         d="m 1.912281,105.0703 c 3.2332708,-1.07776 8.789662,-2.92989 15,-5 -4.866166,-1.622055 -10.1338336,-3.377945 -15,-5 0,4.140226 0,7.84449 0,10 z m 0,0 c 0,-2.15551 0,-5.859774 0,-10 4.8661664,1.622055 10.133834,3.377945 15,5 -6.210338,2.07011 -11.7667292,3.92224 -15,5 z"
-         id="path2542"
-         inkscape:path-effect="#path-effect2546"
-         inkscape:original-d="m 1.912281,105.0703 15,-5 -15,-5 z"
-         inkscape:transform-center-x="90.57901"
-         inkscape:transform-center-y="-0.00871"
-         inkscape:label="marker-9" />
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9200)"
+         d="m 198.0703,95.087719 c -3.23327,1.077757 -8.78966,2.929888 -15,5.000001 4.86617,1.62206 10.13383,3.37794 15,5 0,-4.14023 0,-7.844487 0,-10.000001 z m 0,0 c 0,2.155514 0,5.859771 0,10.000001 -4.86617,-1.62206 -10.13383,-3.37794 -15,-5 6.21034,-2.070113 11.76673,-3.922244 15,-5.000001 z"
+         id="path2530"
+         inkscape:path-effect="#path-effect2534"
+         inkscape:original-d="m 198.0703,95.087719 -15,5.000001 15,5 z"
+         inkscape:transform-center-x="-90.579009"
+         inkscape:transform-center-y="0.0087095"
+         inkscape:label="marker-3" />
     </g>
     <g
        id="g26411"
@@ -700,15 +703,15 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         x="164.87106"
-         y="105.91975"
-         id="text6160"
-         inkscape:label="3oclock"><tspan
+         x="20.995308"
+         y="105.90233"
+         id="text6168"
+         inkscape:label="9oclock"><tspan
            sodipodi:role="line"
-           id="tspan6158"
-           x="164.87106"
-           y="105.91975"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">III</tspan></text>
+           id="tspan6166"
+           x="20.995308"
+           y="105.90233"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">IX</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -724,15 +727,15 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         x="19.853687"
-         y="105.9023"
-         id="text6168"
-         inkscape:label="9oclock"><tspan
+         x="164"
+         y="106"
+         id="text6160"
+         inkscape:label="3oclock"><tspan
            sodipodi:role="line"
-           id="tspan6166"
-           x="19.853687"
-           y="105.9023"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">IX</tspan></text>
+           id="tspan6158"
+           x="164"
+           y="106"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-opacity:1">III</tspan></text>
     </g>
   </g>
 </svg>
