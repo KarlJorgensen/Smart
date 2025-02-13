@@ -43,12 +43,14 @@
 #define THICK_LINES true
 
 int minute2angle(int minute) {
-  return 6 * (minute - 15);
+  return 6 * ((int)minute - 15);
 }
 
-int hour2angle(uint hour) {
+int hour2angle(int hour) {
   return 30 * ( (hour-3) % 12);
 }
+
+#include "watchface-pixmap.h"
 
 void Smart::drawWatchFace(){
 #if SERIAL_DEBUG
@@ -59,20 +61,13 @@ void Smart::drawWatchFace(){
   display.fillScreen(BACKGROUND);
   display.setTextColor(FOREGROUND);
 
+  display.drawXBitmap((display.width() - watchface_width)/2,
+		      (display.height() - watchface_height)/2,
+		      watchface_bits,
+		      watchface_width,
+		      watchface_height,
+		      FOREGROUND);
   // drawTime();
-
-  // A thick circle for the outside border of the face
-  // display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS+1, FOREGROUND);
-  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS, FOREGROUND);
-  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS-1, FOREGROUND);
-
-  drawOuterMarks();
-
-  // A thin circle slightly inside the outside border of the face.
-  //
-  // This makes it appear that the hour/minute marks are inside a "band"
-  // along the edge of the watch face.
-  display.drawCircle(FACE_CENTER_X, FACE_CENTER_Y, FACE_RADIUS - MARKER_MINUTE_LENGTH - 1, FOREGROUND);
 
   drawHourHand();
   drawMinuteHand();
@@ -217,7 +212,7 @@ void Smart::drawMultiLine(const float *line , uint numPoints, float angle) {
   }
 }
 
-#include "hour_hand.h"
+#include "hour_hand-lines.h"
 
 void Smart::drawHourHand() {
   float angle = hour2angle(currentTime.Hour) + currentTime.Minute/2.0;
@@ -232,7 +227,7 @@ void Smart::drawHourHand() {
 		angle);
 }
 
-#include "minute_hand.h"
+#include "minute_hand-lines.h"
 
 void Smart::drawMinuteHand() {
   float angle = minute2angle(currentTime.Minute);

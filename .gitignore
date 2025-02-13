@@ -11,5 +11,7 @@ __pycache__/
 .*.stamp
 
 # Generated from svgs
-hour_hand.h
-minute_hand.h
+*-lines.h
+*-pixmap.h
+*-pixmap.png
+*-pixmap.xbm
