@@ -161,29 +161,29 @@ void Smart::drawMultiLine(const float *line , uint numPoints, float angle) {
 #include "hour_hand-lines.h"
 
 void Smart::drawHourHand() {
-  float angle = hour2angle(currentTime.Hour) + currentTime.Minute/2.0;
+  hourHandAngle = hour2angle(currentTime.Hour) + currentTime.Minute/2.0;
 
 #if SERIAL_DEBUG && 0
   Serial.print("Hour hand angle: ");
-  Serial.println(angle);
+  Serial.println(hourHandAngle);
 #endif
 
   drawMultiLine(hour_hand,
 		sizeof(hour_hand)/sizeof(float)/2,
-		angle);
+		hourHandAngle);
 }
 
 #include "minute_hand-lines.h"
 
 void Smart::drawMinuteHand() {
-  float angle = minute2angle(currentTime.Minute);
+  minuteHandAngle = minute2angle(currentTime.Minute);
 
-#if SERIAL_DEBUG && 1
+#if SERIAL_DEBUG && 0
   Serial.print("Minute hand angle: ");
-  Serial.println(angle);
+  Serial.println(minuteHandAngle);
 #endif
 
   drawMultiLine(minute_hand,
 		sizeof(minute_hand)/sizeof(float)/2,
-		angle);
+		minuteHandAngle);
 }

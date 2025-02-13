@@ -12,6 +12,9 @@ protected:
   void drawMultiLine(const float *line , uint numPoints, float angle);
   void drawHourHand();
   void drawMinuteHand();
+
+  float hourHandAngle;
+  float minuteHandAngle;
 };
 
 #endif
