@@ -9,8 +9,6 @@ public:
   void drawWatchFace();
 protected:
   void drawTime();
-  void drawOuterMarks();
-  void drawOuterMark(int hour, int pixels);
   void drawMultiLine(const float *line , uint numPoints, float angle);
   void drawHourHand();
   void drawMinuteHand();

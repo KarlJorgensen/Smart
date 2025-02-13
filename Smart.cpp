@@ -19,28 +19,15 @@
 // parts of the face to not fit on screen.
 #define FACE_RADIUS 99
 
-// The hour markers are arraged in a circle with this radius marking the
-// "outermost" part of the markers.
-//
-// The markers are circles, whose "outer edge" (furthest from the centre
-// of the watch face) will "touch" this (imaginary) circle
-#define MARKER_OUTER_RADIUS (FACE_RADIUS - 2)
-
-// 3-hour markers & 5-minute markers are filled circles with this radius
-#define MARKER_MAJOR_HOUR_RADIUS 7
-#define MARKER_MINOR_HOUR_RADIUS 4
-// 1-minute markers are lines of this length
-#define MARKER_MINUTE_LENGTH (2 * MARKER_MAJOR_HOUR_RADIUS)
-
 // The centre of the watch face is a filled circle.
 // Set to zero to disable
-#define CENTRE_COVER_RADIUS MARKER_MAJOR_HOUR_RADIUS
+#define CENTRE_COVER_RADIUS 7
 
 // The hands will stay within a circle of this radius
-#define HANDS_RADIUS (MARKER_OUTER_RADIUS - MARKER_MAJOR_HOUR_RADIUS)
+#define HANDS_RADIUS 80
 
 // Whether we want thick lines
-#define THICK_LINES true
+#define THICK_LINES false
 
 int minute2angle(int minute) {
   return 6 * ((int)minute - 15);
@@ -78,52 +65,11 @@ void Smart::drawWatchFace(){
 		     FACE_CENTER_Y,
 		     CENTRE_COVER_RADIUS,
 		     FOREGROUND);
+  display.fillCircle(FACE_CENTER_X,
+		     FACE_CENTER_Y,
+		     CENTRE_COVER_RADIUS-2,
+		     BACKGROUND);
 #endif
-}
-
-void Smart::drawOuterMarks(){
-  for (int minute=0;
-       minute < 60;
-       minute += (MARKER_MINUTE_LENGTH ? 1 : 15)
-       ) {
-    if ((minute % 15) == 0) {
-      drawOuterMark(minute2angle(minute), MARKER_MAJOR_HOUR_RADIUS);
-    } else if ((minute % 5) == 0) {
-      drawOuterMark(minute2angle(minute), MARKER_MINOR_HOUR_RADIUS);
-    }
-#if MARKER_MINUTE_LENGTH
-    else {
-      float radians = PI * minute2angle(minute) / 180;
-      float cosval = cos(radians), sinval = sin(radians);
-      display.drawLine(round(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH)),
-		       round(FACE_CENTER_Y + sinval * (MARKER_OUTER_RADIUS - MARKER_MINUTE_LENGTH)),
-		       round(FACE_CENTER_X + cosval * (MARKER_OUTER_RADIUS)),
-		       round(FACE_CENTER_X + sinval * (MARKER_OUTER_RADIUS)),
-		       FOREGROUND);
-    }
-#endif
-  }
-}
-
-// angle: 0° is 3'oclock, with positive values going clockwise.
-void Smart::drawOuterMark(int angle, int pixels){
-  float radians = PI * angle / 180;
-  float cosval = cos(radians);
-  float sinval = sin(radians);
-
-  display.fillCircle(round(FACE_CENTER_X + (MARKER_OUTER_RADIUS - pixels) * cosval),
-		     round(FACE_CENTER_Y + (MARKER_OUTER_RADIUS - pixels) * sinval),
-		     pixels,
-		     FOREGROUND);
-}
-
-void Smart::drawTime(){
-  display.setCursor(50, 100);
-  display.setFont(&FreeSans24pt7b);
-
-  char time[10];
-  sprintf(time, "%02d:%02d", currentTime.Hour, currentTime.Minute);
-  display.println(time);
 }
 
 /*
