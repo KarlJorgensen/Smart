@@ -2,8 +2,8 @@
 
 #include <Fonts/FreeSans24pt7b.h>
 
-#define DARKMODE false
-#define SERIAL_DEBUG 1
+#define DARKMODE true
+#define SERIAL_DEBUG 0
 
 #define BACKGROUND (DARKMODE ? GxEPD_BLACK : GxEPD_WHITE)
 #define FOREGROUND (DARKMODE ? GxEPD_WHITE : GxEPD_BLACK)
