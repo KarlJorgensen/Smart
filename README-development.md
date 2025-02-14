@@ -29,7 +29,7 @@ you can basically use all the facilities available in SVG with
 near-utter abandon - as long as Inkscape supports it.
 
 Except: The watch has an e-ink screen which _only_ supports black and
-white. It does _not_ support any shades of gray:
+white. It does _not_ support any shades of grey:
 
  * Any pixel which is at least 50% black will be completely black
  

@@ -27,9 +27,10 @@ couple of respects:
 
 To build this, you will need a few things installed:
 
- * An operating system. I use Debian GNU/Linux, but any decent Linux
-   distribution should work just as well.  For MacOS/Windows: Your
-   mileage will vary, and might not be much at all.
+ * An operating system. I use [Debian GNU/Linux](https://debian.org),
+   but any decent Linux distribution should work just as well.  For
+   MacOS/Windows: Your mileage will vary, and might not be much at
+   all.
  
  * Assuming you want to actually run it: A compatible watch. They are
    sold by e.g. [SQFMI](https://watchy.sqfmi.com/) and probably many
@@ -38,9 +39,9 @@ To build this, you will need a few things installed:
    boycotting, so I won't link it here).
  
  * The [Arduino IDE](https://www.arduino.cc/en/software). I used
-   1.8.19 (as packaged in Debian 12/bookworm), but other versions will
-   probably work too.
-   
+   version 1.8.19 (as packaged in Debian 12/bookworm), but other
+   versions will probably work too.
+
  * The Aduino IDE board files for the watch. See
    <https://watchy.sqfmi.com/docs/legacy#arduino-setup> for the gory
    details.
@@ -65,8 +66,18 @@ To build this, you will need a few things installed:
    (`svg2multiline.py`) to convert the watch hand SVGs into line
    drawing coordinates. Probably needs python 3.
 
+ * The source code. You are probably looking at in Github, and they
+   have directions on how to get a copy.
+
  * Patience. The build process is slow. Coffee is optional (but
    desirable as always).
+
+If you have everything set up, and the watch connected via USB, then
+simply running:
+
+    make upload
+
+should compile the code and upload it to your watch.
 
 # Tweaking It #
 
