@@ -10,6 +10,14 @@ PIXMAP_HEADERS = watchface-pixmap.h
 HEADERS = $(LINE_HEADERS) $(PIXMAP_HEADERS)
 IMAGES = $(PIXMAP_HEADERS:%.h=%.xbm)  $(PIXMAP_HEADERS:%.h=%.png)
 
+.PHONY: verify
+verify: dirs $(HEADERS)
+	arduino --verify \
+		--pref build.path=$(BUILD_PATH) \
+		--pref build.cache=$(BUILD_CACHE) \
+		--pref update.check=false \
+		$(wildcard *.ino)
+
 .PHONY: upload
 upload: dirs $(HEADERS)
 	arduino --upload \

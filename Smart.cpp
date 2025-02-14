@@ -15,31 +15,8 @@ You should have received a copy of the GNU General Public License along
 with Smart. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include  "Smart.h"
-
-#define DARKMODE true
-#define SERIAL_DEBUG 0
-
-#define BACKGROUND (DARKMODE ? GxEPD_BLACK : GxEPD_WHITE)
-#define FOREGROUND (DARKMODE ? GxEPD_WHITE : GxEPD_BLACK)
-
-// Placement of the analogue watch face.
-// In general, you want to place this in the centre of the screen
-#define FACE_CENTER_X 100
-#define FACE_CENTER_Y 100
-
-// Outer radius of the clock face - in pixels
-//
-// Depending on the size of the screen and placement, this may cause
-// parts of the face to not fit on screen.
-#define FACE_RADIUS 99
-
-// The centre of the watch face is a filled circle.
-// Set to zero to disable
-#define CENTRE_COVER_RADIUS 7
-
-// Whether we want thick lines
-#define THICK_LINES false
+#include "Smart.h"
+#include "settings.h"
 
 int minute2angle(int minute) {
   return 6 * ((int)minute - 15);

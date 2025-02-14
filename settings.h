@@ -22,22 +22,28 @@
 #define NTP_SERVER "pool.ntp.org"
 #define GMT_OFFSET_SEC 3600 * -5 //New York is UTC -5 EST, -4 EDT, will be overwritten by weather data
 
-watchySettings settings{
-    #ifdef CITY_ID
-        .cityID = CITY_ID,
-    #else
-        .cityID = "",
-        .lat = LAT,
-        .lon = LON,
-    #endif
-    .weatherAPIKey = OPENWEATHERMAP_APIKEY,
-    .weatherURL = OPENWEATHERMAP_URL,
-    .weatherUnit = TEMP_UNIT,
-    .weatherLang = TEMP_LANG,
-    .weatherUpdateInterval = WEATHER_UPDATE_INTERVAL,
-    .ntpServer = NTP_SERVER,
-    .gmtOffset = GMT_OFFSET_SEC,
-    .vibrateOClock = true,
-};
+#define DARKMODE true
+#define SERIAL_DEBUG 0
+
+#define BACKGROUND (DARKMODE ? GxEPD_BLACK : GxEPD_WHITE)
+#define FOREGROUND (DARKMODE ? GxEPD_WHITE : GxEPD_BLACK)
+
+// Placement of the analogue watch face.
+// In general, you want to place this in the centre of the screen
+#define FACE_CENTER_X 100
+#define FACE_CENTER_Y 100
+
+// Outer radius of the clock face - in pixels
+//
+// Depending on the size of the screen and placement, this may cause
+// parts of the face to not fit on screen.
+#define FACE_RADIUS 99
+
+// The centre of the watch face is a filled circle.
+// Set to zero to disable
+#define CENTRE_COVER_RADIUS 7
+
+// Whether we want thick lines
+#define THICK_LINES false
 
 #endif

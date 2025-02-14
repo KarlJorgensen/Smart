@@ -42,8 +42,8 @@ To build this, you will need a few things installed:
    works. All the compile-time graphics manipulation is done through
    the `Makefile`.  You can use the Arduino IDE to compile/upload the
    code, but you _need to_ use e.g. `make headers` first. Or you can
-   let the `Makefile` do the whole thing with just `make` - this makes
-   it easy to use an external editor.
+   let the `Makefile` do the whole thing with just `make upload` -
+   this makes it easy to use an external editor.
 
  * Inkscape: Used at build time to get a decent SVG -> raster
    conversion. Also nice if you want to edit the designs. I used
