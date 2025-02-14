@@ -28,7 +28,6 @@ class Smart : public Watchy{
 public:
   void drawWatchFace();
 protected:
-  void drawTime();
   void drawMultiLine(const multiline_t *line , uint numPoints, float angle);
   void drawHourHand();
   void drawMinuteHand();
