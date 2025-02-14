@@ -16,7 +16,6 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include "Smart.h"
-#include "settings.h"
 
 int minute2angle(int minute) {
   return 6 * ((int)minute - 15);
@@ -29,6 +28,10 @@ int hour2angle(int hour) {
 #include "watchface-pixmap.h"
 
 void Smart::drawWatchFace(){
+#if SCREENSHOT_MODE
+  currentTime.Hour = SCREENSHOT_HOUR;
+  currentTime.Minute = SCREENSHOT_MINUTE;
+#endif
 #if SERIAL_DEBUG
   char debug_time[10];
   sprintf(debug_time, "%02d:%02d", currentTime.Hour, currentTime.Minute);

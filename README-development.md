@@ -27,7 +27,7 @@ raster image which gets embedded in the code.
 
 The resulting image will be a very good likeness of the original SVG;
 you can basically use all the facilities available in SVG with
-near-utter abandon.
+near-utter abandon - as long as Inkscape supports it.
 
 Except: The watch has an e-ink screen which _only_ supports black and
 white. It does _not_ support any shades of gray:
@@ -36,6 +36,8 @@ white. It does _not_ support any shades of gray:
  
  * Any pixel which is < 50% black will be completely white.
 
+(in dark mode, black and white are obviously reversed)
+
 Which means that nice stuff line antialised lines & gradients are a
 non-starter.  But if you are careful of aligning things with the pixel
 grid: you can use patterns for dithering.
@@ -43,24 +45,26 @@ grid: you can use patterns for dithering.
 For convenience, `watchface-pixmap.svg` defines the SVG document in
 units of pixels (200 × 200), and has a grid to match.
 
-If you want to get a preview of the watch face (static image only),
-running `make images` will generate `watchface-pixmap.xbm` which can
-be viewed with many image viewers. This is useful for getting quick
-feedback on whether the result will look as intended.  If your image
-viewer does not support the XBM format you will be relieved to know
-that `watchface-pixmap.png` is also generated and you can use that
-instead.
+If you want to get a preview of the watch face (static image only, no
+hands), running `make images` will generate `watchface-pixmap.xbm`
+which can be viewed with many image viewers. This is useful for
+getting quick feedback on whether the result will look as intended.
+
+If your image viewer does not support the XBM format you will be
+relieved to know that `watchface-pixmap.png` is also generated and you
+can use that instead.
 
 If you want to use the Arduino IDE to upload the resulting binary to
 the watch: Be sure to run `make headers` first: This will update the
 `*.h` file which contains the image.
 
-# The Hour/Minute Hands #
+## The Hour/Minute Hands ##
 
 These are line drawings consisting of a series of connected straight
 lines - in the code these are referred to as `MultiLine`.
 
-Although they are plain SVG files, they come with a number of
+Although they are plain SVG files (named `hour_hand-lines.svg` and
+`minute_hand-lines.svg` respectively), they come with a number of
 limitations in Smart:
 
  * The SVG document should be square. Defining it in units of pixels
@@ -73,7 +77,7 @@ limitations in Smart:
  * The path is translated into a sequence of straight lines. Straight
    lines ONLY. Even if you use curves in the SVG, they will be
    interpreted as straight lines.
-   
+
  * Line (or rather: "stroke") attributes like paint and style are
    ignored. The lines will *always* be drawn as solid 1px lines on the
    watch. Unless `THICK_LINES` is true: Then the lines will be
@@ -100,7 +104,8 @@ limitations in Smart:
    watch face.
    
  * The edges of the document corresponds to the edges of the
-   screen. Design your hand with a length which fits the watch face.
+   screen. Design your hands with suitable lengths to fit the watch
+   face.
    
 When the hand is drawn at run-time it will rotated to the correct
 position.
@@ -110,3 +115,74 @@ unavoidably introduce "jaggered" lines. So the perceived thickness of
 lines may be different at different angles, which affects the
 "look". Be sure to test the layout.
 
+## Getting Screenshots ##
+
+Getting a screen shot of your screen face is far more cumbersome than
+on a PC, and requires a separate build.
+
+It takes a couple of steps:
+
+ * Modify `settings.h` and
+
+   * set `SCREENSHOT_MODE` to a nonzero value
+   * set `SCREENSHOT_HOUR` and `SCREENSHOT_MINUTE` to the time you
+     want the face to show.
+   * set `SERIAL_SPEED` to your desired serial port baud rate
+
+ * Patch `../libraries/GxEPD2/src/GxEPD2_BW.h` using
+   `GxEPD2_BW.h.patch`.
+
+   I know. This is ugly as it is _literally_ modifying a
+   3rd party library, but the [official
+   directions](https://github.com/sqfmi/Watchy/wiki/Screenshots-of-Watchfaces)
+   aren't any better. Perhaps that is the Arduino way?
+
+   My patch produces Plain PBM format output instead.
+
+   The patch can be applied with e.g. (adjust paths as necessary):
+
+        patch ../libraries/GxEPD2/src/GxEPD2_BW.h GxEPD2_BW.h.patch
+
+   NOTE: This patch was done against version 1.6.1 of GxEPD2. If your
+   version is different the patch may not apply.
+
+ * Compile and upload to the watch
+
+ * Once the upload is done connect a serial terminal to
+   `/dev/ttyACM0`.
+
+   This should not be done before the upload is complete as the upload
+   is also using the same serial port. Having both processes access
+   the serial port simultaneously is bound to break things.
+
+   In Emacs, you can use the `serial-term` command for
+   this. Alternatively, you can use e.g. `minicom`, and others are
+   available too.
+
+ * The watch will now produce output to the serial terminal when it
+   redraws the screen - i.e. once per minute.
+
+ * Capture the output and pipe it into `pnmtopng` and send the output
+   to a file of your choosing - e.g.:
+
+        pnmtopng < serial-capture.txt > screenshot.png
+
+And you (finally) have a screenshot. If you replace the original
+`screenshot.png` in this directory, it should show nicely in the
+`README.md`.
+
+Once the code (and screenshot) is to your liking, you can revert
+things again:
+
+ * Modify `settings.h` and
+
+   * set `SCREENSHOT_MODE` to zero
+
+ * If you used the patch above, it can be reverted with e.g. (adjust
+   paths as necessary):
+
+        patch --reverse ../libraries/GxEPD2/src/GxEPD2_BW.h GxEPD2_BW.h.patch
+
+ * Compile and upload to the watch.
+
+ * The watch should now show the correct time.

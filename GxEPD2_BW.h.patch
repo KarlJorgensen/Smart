@@ -1,0 +1,33 @@
+--- ../Arduino/libraries/GxEPD2/src/GxEPD2_BW.h.orig	2024-12-14 08:16:26.000000000 +0000
++++ ../Arduino/libraries/GxEPD2/src/GxEPD2_BW.h	2025-02-14 18:27:24.472762062 +0000
+@@ -357,6 +357,30 @@
+         epd2.writeImageAgain(_buffer, 0, 0, GxEPD2_Type::WIDTH, _page_height);
+       }
+       if (!partial_update_mode) epd2.powerOff();
++
++#if 1
++      // See pbm(5) for details
++      Serial.println("# Screenshot in PBM format");
++
++      Serial.println("P1");
++      Serial.println(GxEPD2_Type::WIDTH);
++      Serial.println(_page_height);
++
++      for(int i=0;
++	  i < sizeof(_buffer)/sizeof(uint8_t);
++	  /* "i" increments inside the loop */) {
++	uint8_t thebyte= _buffer[i];
++	for (int bit=0; bit < 8; bit++, thebyte=thebyte<<1) {
++	  Serial.print( (thebyte & 0x80) ? "1": "0");
++	}
++	i++;
++	if (i % 10 == 0) {
++	  Serial.println("");
++	}
++      }
++      Serial.println("");
++      Serial.println("# End of screenshot");
++#endif
+     }
+ 
+     // display part of buffer content to screen, useful for full screen buffer

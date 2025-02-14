@@ -22,7 +22,10 @@ watchySettings settings{
 Smart watchy(settings);
 
 void setup(){
-  Serial.begin(9600);
+#if SERIAL_DEBUG || SCREENSHOT_MODE
+  Serial.begin(SERIAL_SPEED);
+  while (!Serial); // wait for serial port to connect. Needed for native USB port on Arduino only
+#endif
   watchy.init();
 }
 

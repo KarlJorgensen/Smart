@@ -18,6 +18,7 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 #ifndef SMART_H
 #define SMART_H
 
+#include "settings.h"
 #include <Watchy.h>
 
 // This must be a signed type as coordinates may be negative

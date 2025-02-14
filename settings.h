@@ -23,7 +23,6 @@
 #define GMT_OFFSET_SEC 3600 * -5 //New York is UTC -5 EST, -4 EDT, will be overwritten by weather data
 
 #define DARKMODE true
-#define SERIAL_DEBUG 0
 
 #define BACKGROUND (DARKMODE ? GxEPD_BLACK : GxEPD_WHITE)
 #define FOREGROUND (DARKMODE ? GxEPD_WHITE : GxEPD_BLACK)
@@ -45,5 +44,32 @@
 
 // Whether we want thick lines
 #define THICK_LINES false
+
+// Serial line debugging
+//
+// Enables the code which writes writes diagnostic information to the
+// serial line.
+#define SERIAL_DEBUG true
+
+// Speed of the serial line
+//
+// This is only used if SERIAL_DEBUG or SCREENSHOT_MODE is set
+#define SERIAL_SPEED 9600
+
+// Screenshot mode
+//
+// When screenshot mode is enabled, then the clock will be set to the
+// given time and a PBM-format dump will be emitted on the serial
+// console (which will be implicitly enabled).
+//
+// The clock will NOT show the correct current time. It will appear
+// frozen. But a screenshot will be done once a minute.
+#define SCREENSHOT_MODE false
+
+// These two only have effect when SCREENSHOT_MODE is activated.
+//
+// The "classic" watch face is 10:08 +/- a couple of minutes.
+#define SCREENSHOT_HOUR 10
+#define SCREENSHOT_MINUTE 8
 
 #endif

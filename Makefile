@@ -68,3 +68,17 @@ headers : $(HEADERS)
 
 .PHONY: images
 images: $(IMAGES)
+
+# Convenience rules for generating HTML versions of the Markdown
+# files. The HTML files are not published, but are useful for spotting
+# formatting errors and the like.
+#
+.PHONY: readmes
+
+readmes : README.html README-development.html
+
+%.html : %.md
+	rm -f $@
+	markdown $< > $@.new
+	chmod -w $@.new
+	mv -f $@.new $@

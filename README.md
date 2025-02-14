@@ -5,6 +5,8 @@ and compatible ones.
 
 This is a simple analogue watch face without any frills.
 
+![Screen shot of watch face](screenshot.png)
+
 It is a little different from other watchy projects out there in a
 couple of respects:
 
@@ -25,7 +27,7 @@ couple of respects:
 
 To build this, you will need a few things installed:
 
- * And operating system. I use Debian GNU/Linux, but any decent Linux
+ * An operating system. I use Debian GNU/Linux, but any decent Linux
    distribution should work just as well.  For MacOS/Windows: Your
    mileage will vary, and might not be much at all.
  

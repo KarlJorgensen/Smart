@@ -15,3 +15,5 @@ __pycache__/
 *-pixmap.h
 *-pixmap.png
 *-pixmap.xbm
+README.html
+README-development.html
