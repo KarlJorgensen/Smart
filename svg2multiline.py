@@ -1,7 +1,42 @@
 #!/usr/bin/env python3
+"""Stupidly simple specialised SVG parser to convert a line drawing to MultiLine
+arrays.
 
+Background: The watch hands on the watch are actually a sequence of
+straight lines drawn at run-time. This creates the coordinates for the
+points in these lines.
+
+This will create the coordinates for the points connecting the lines
+in a coordinate system where (0, 0) is at the _center_ of the screen,
+with the positive X-axis point east and positive Y-axis pointing
+north.
+
+Thus the screen corners will be
+ * (-100, -100) = NorthWest
+ * (+100, +100) = SouthEast
+
+The idea is to minimise the amount of work which needs to be done at
+run-time: The watch is not that powerful.
+
+"""
 
 # See also: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+
+# This file is part of Smart.
+
+# Smart is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free
+# Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+
+# Smart is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+
+# You should have received a copy of the GNU General Public License along
+# with Smart. If not, see <https://www.gnu.org/licenses/>.
+
 
 import argparse
 from xml.dom import minidom
