@@ -160,12 +160,12 @@ def main():
         except StopIteration:
             pass
 
-        print(f'static const float {name}[] = ' + '{' + f' // {len(points)} points')
+        print(f'static const multiline_t {name}[] = ' + '{' + f' // {len(points)} points')
         for x, y in points:
-            # Map the coordinates to values between -1 and +1
-            x = 2 * (x/width - 0.5)
-            y = 2 * (y/height - 0.5)
-            print(f'  HANDS_RADIUS * {x}, HANDS_RADIUS * {y},')
+            # Map the coordinates to values between -100 and +100
+            x = int(200 * (x/width - 0.5) + 0.5)
+            y = int(200 * (y/height - 0.5) + 0.5)
+            print(f'  {x}, {y},')
         print('};')
 
     print('''

@@ -20,13 +20,16 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 
 #include <Watchy.h>
 
+// This must be a signed type as coordinates may be negative
+#define multiline_t int8_t
+
 class Smart : public Watchy{
   using Watchy::Watchy;
 public:
   void drawWatchFace();
 protected:
   void drawTime();
-  void drawMultiLine(const float *line , uint numPoints, float angle);
+  void drawMultiLine(const multiline_t *line , uint numPoints, float angle);
   void drawHourHand();
   void drawMinuteHand();
 

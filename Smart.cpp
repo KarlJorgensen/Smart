@@ -40,9 +40,6 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 // Set to zero to disable
 #define CENTRE_COVER_RADIUS 7
 
-// The hands will stay within a circle of this radius
-#define HANDS_RADIUS 80
-
 // Whether we want thick lines
 #define THICK_LINES false
 
@@ -94,9 +91,9 @@ void Smart::drawWatchFace(){
   where (0,0) is at the centre of the clock face, and given in units of
   pixels.
 
-  A multiline array is an array of int's. The array length MUST be
-  divisible by 2; each element is interpreted as alternating x's and y's
-  for points.
+  A multiline array is an array of multline_t's. The array length MUST
+  be divisible by 2; each element is interpreted as alternating x's and
+  y's for points.
 
   Lines will be drawn between the points: from the 1st to the 2nd, from
   the 2nd to the 3rd etc.  NO LINE will be drawn from the last point
@@ -119,7 +116,7 @@ void Smart::drawWatchFace(){
    angle is in degrees (of a 360° circle), with 0° at the 3 o'clock
    position (no rotation) going clockwise for positive angles.
  */
-void Smart::drawMultiLine(const float *line , uint numPoints, float angle) {
+void Smart::drawMultiLine(const multiline_t *line , uint numPoints, float angle) {
   float radians = PI * angle / 180;
   float cosval = cos(radians);
   float sinval = sin(radians);
@@ -184,7 +181,7 @@ void Smart::drawHourHand() {
 #endif
 
   drawMultiLine(hour_hand,
-		sizeof(hour_hand)/sizeof(float)/2,
+		sizeof(hour_hand)/sizeof(multiline_t)/2,
 		hourHandAngle);
 }
 
@@ -199,6 +196,6 @@ void Smart::drawMinuteHand() {
 #endif
 
   drawMultiLine(minute_hand,
-		sizeof(minute_hand)/sizeof(float)/2,
+		sizeof(minute_hand)/sizeof(multiline_t)/2,
 		minuteHandAngle);
 }

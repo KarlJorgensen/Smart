@@ -99,9 +99,14 @@ limitations in Smart:
  * The center of the SVG document corresponds to the center of the
    watch face.
    
- * The edges of the document corresponds to the maximum possible
-   extent of the hand - which is _different_ from the edge of the
-   watch screen.
+ * The edges of the document corresponds to the edges of the
+   screen. Design your hand with a length which fits the watch face.
    
 When the hand is drawn at run-time it will rotated to the correct
-position and scaled according to `HANDS_RADIUS`.
+position.
+
+Remember that positions other than 3/6/9/12 o'clock will thus
+unavoidably introduce "jaggered" lines. So the perceived thickness of
+lines may be different at different angles, which affects the
+"look". Be sure to test the layout.
+
