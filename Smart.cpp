@@ -17,8 +17,6 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 
 #include  "Smart.h"
 
-#include <Fonts/FreeSans24pt7b.h>
-
 #define DARKMODE true
 #define SERIAL_DEBUG 0
 
@@ -60,7 +58,6 @@ void Smart::drawWatchFace(){
   Serial.println(debug_time);
 #endif
   display.fillScreen(BACKGROUND);
-  display.setTextColor(FOREGROUND);
 
   display.drawXBitmap((display.width() - watchface_width)/2,
 		      (display.height() - watchface_height)/2,
