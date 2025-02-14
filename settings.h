@@ -22,7 +22,7 @@
 #define NTP_SERVER "pool.ntp.org"
 #define GMT_OFFSET_SEC 3600 * -5 //New York is UTC -5 EST, -4 EDT, will be overwritten by weather data
 
-#define DARKMODE true
+#define DARKMODE 1
 
 #define BACKGROUND (DARKMODE ? GxEPD_BLACK : GxEPD_WHITE)
 #define FOREGROUND (DARKMODE ? GxEPD_WHITE : GxEPD_BLACK)
@@ -43,13 +43,13 @@
 #define CENTRE_COVER_RADIUS 7
 
 // Whether we want thick lines
-#define THICK_LINES false
+#define THICK_LINES 0
 
 // Serial line debugging
 //
 // Enables the code which writes writes diagnostic information to the
 // serial line.
-#define SERIAL_DEBUG true
+#define SERIAL_DEBUG 0
 
 // Speed of the serial line
 //
@@ -59,12 +59,15 @@
 // Screenshot mode
 //
 // When screenshot mode is enabled, then the clock will be set to the
-// given time and a PBM-format dump will be emitted on the serial
-// console (which will be implicitly enabled).
+// given time.
+//
+// If you have patched GxEPD2_BW.h (see README-development.md), then a
+// screen dump will be emitted on the serial console (which will be
+// implicitly enabled).
 //
 // The clock will NOT show the correct current time. It will appear
 // frozen. But a screenshot will be done once a minute.
-#define SCREENSHOT_MODE false
+#define SCREENSHOT_MODE 0
 
 // These two only have effect when SCREENSHOT_MODE is activated.
 //
