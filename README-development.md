@@ -10,11 +10,10 @@ The watch face consists of 3 parts, which are edited separately:
  * The Static Watch Face: This is responsible for most of the "look"
    of the watch face. It is basically a background image.
    
- * The hour hand & minute hands: Line drawings which are rotated,
-   scaled and placed at run-time. Lots of lovely trigonometry
-   involved.
+ * The hour & minute hands: Line drawings which are rotated, scaled
+   and placed at run-time. Lots of lovely trigonometry involved.
 
-## Static Watch Face ##
+## The Static Watch Face ##
 
 The source for this is `watchface-pixmap.svg` - a perfectly normal SVG
 file which you can edit with your favourite editor (e.g. Inkscape).
@@ -115,7 +114,7 @@ unavoidably introduce "jaggered" lines. So the perceived thickness of
 lines may be different at different angles, which affects the
 "look". Be sure to test the layout.
 
-## Getting Screenshots ##
+# Getting Screenshots #
 
 Getting a screen shot of your screen face is far more cumbersome than
 on a PC, and requires a separate build.

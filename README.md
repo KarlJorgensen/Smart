@@ -31,36 +31,47 @@ To build this, you will need a few things installed:
    distribution should work just as well.  For MacOS/Windows: Your
    mileage will vary, and might not be much at all.
  
- * Assuming you want to actually run it: A compatible watch.
+ * Assuming you want to actually run it: A compatible watch. They are
+   sold by e.g. [SQFMI](https://watchy.sqfmi.com/) and probably many
+   others. Mine is probably a clone, as I got it from elsewhere (a big
+   American retailer named after a rainforest, and who I'm now
+   boycotting, so I won't link it here).
  
- * The Arduino IDE. I used 1.8.19 (as packaged in Debian 12/bookworm),
-   but other versions will probably work too.
+ * The [Arduino IDE](https://www.arduino.cc/en/software). I used
+   1.8.19 (as packaged in Debian 12/bookworm), but other versions will
+   probably work too.
    
  * The Aduino IDE board files for the watch. See
    <https://watchy.sqfmi.com/docs/legacy#arduino-setup> for the gory
    details.
  
- * GNU Make. That's how I build things. It is simple, and it
-   works. All the compile-time graphics manipulation is done through
-   the `Makefile`.  You can use the Arduino IDE to compile/upload the
-   code, but you _need to_ use e.g. `make headers` first. Or you can
-   let the `Makefile` do the whole thing with just `make upload` -
-   this makes it easy to use an external editor.
+ * [GNU Make](https://www.gnu.org/software/make/). That's how I build
+   things. It is simple, and it works. All the compile-time graphics
+   manipulation is done through the `Makefile`.  You can use the
+   Arduino IDE to compile/upload the code, but you _need to_ use
+   e.g. `make headers` first. Or you can let the `Makefile` do the
+   whole thing with just `make upload` - this makes it easy to use an
+   external editor.
 
- * Inkscape: Used at build time to get a decent SVG -> raster
-   conversion. Also nice if you want to edit the designs. I used
-   v1.2.2, but other versions are very likely to work out of the box
-   as well.
+ * [Inkscape](https://inkscape.org/): Used at build time to get a
+   decent SVG -> raster conversion. Also nice if you want to edit the
+   designs. I used v1.2.2, but other versions are very likely to work
+   out of the box as well.
    
- * imagemagick: The compilation process uses it to convert raster
-   images to various formats.
+ * [imagemagick](https://imagemagick.org): The compilation process
+   uses it to convert raster images to various formats.
    
- * python: We have a custom python script (`svg2multiline.py`) to
-   convert the watch hand SVGs into line drawing coordinates.
+ * [python](https://www.python.org/): There is a custom python script
+   (`svg2multiline.py`) to convert the watch hand SVGs into line
+   drawing coordinates. Probably needs python 3.
 
  * Patience. The build process is slow. Coffee is optional (but
    desirable as always).
-   
+
+# Tweaking It #
+
+See [README-development.md](README-development.md) for that.
+
 # Just So You Know ... #
 
 This is my first foray into the world of Arduino and other embedded
