@@ -10,6 +10,11 @@ PIXMAP_HEADERS = watchface-pixmap.h
 HEADERS = $(LINE_HEADERS) $(PIXMAP_HEADERS)
 IMAGES = $(PIXMAP_HEADERS:%.h=%.xbm)  $(PIXMAP_HEADERS:%.h=%.png)
 
+SERIAL_PORT=/dev/ttyACM0
+
+# SERIAL_RATE should match SERIAL_SPEED in settings.h
+SERIAL_RATE=921600
+
 .PHONY: verify
 verify: dirs $(HEADERS)
 	arduino --verify \
@@ -17,6 +22,11 @@ verify: dirs $(HEADERS)
 		--pref build.cache=$(BUILD_CACHE) \
 		--pref update.check=false \
 		$(wildcard *.ino)
+
+.PHONY: debug
+debug : upload
+	stty --file=$(SERIAL_PORT) $(SERIAL_RATE)
+	tail --follow $(SERIAL_PORT)
 
 .PHONY: upload
 upload: dirs $(HEADERS)

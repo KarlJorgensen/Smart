@@ -16,9 +16,10 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include "Smart.h"
+#include <Fonts/FreeSansBold12pt7b.h>
+#include <Fonts/FreeSansBold9pt7b.h>
 
-int normaliseAngle(int angle) {
-  angle = angle % 360;
+int normaliseAngle(float angle) {
   while (angle < 0)
     angle += 360;
   while (angle >= 360)
@@ -30,7 +31,7 @@ int normaliseAngle(int angle) {
 
    0° is at 3 o'clock. Return value is normalised to [0..359]
  */
-int minute2angle(int minute) {
+float minute2angle(int minute) {
   return normaliseAngle(6 * ((int)minute - 15));
 }
 
@@ -38,7 +39,7 @@ int minute2angle(int minute) {
 
    0° is at 3 o'clock. Return value is normalised to [0..359]
  */
-int hour2angle(int hour) {
+float hour2angle(int hour) {
   return normaliseAngle(30 * ( (hour-3) % 12));
 }
 
@@ -50,8 +51,8 @@ void Smart::drawWatchFace(){
   currentTime.Minute = SCREENSHOT_MINUTE;
 #endif
 #if SERIAL_DEBUG
-  char debug_time[10];
-  sprintf(debug_time, "%02d:%02d", currentTime.Hour, currentTime.Minute);
+  char debug_time[30];
+  sprintf(debug_time, "\nTime: %02d:%02d", currentTime.Hour, currentTime.Minute);
   Serial.println(debug_time);
 #endif
   display.fillScreen(BACKGROUND);
@@ -65,6 +66,11 @@ void Smart::drawWatchFace(){
   drawHourHand();
   drawMinuteHand();
 
+#if SERIAL_DEBUG
+  Serial.print("Hour hand angle: "); Serial.println(hourHandAngle);
+  Serial.print("Minute hand angle: "); Serial.println(minuteHandAngle);
+#endif
+
 #if CENTRE_COVER_RADIUS
   // Cover the centre of the watch face
   display.fillCircle(FACE_CENTER_X,
@@ -76,6 +82,17 @@ void Smart::drawWatchFace(){
 		     CENTRE_COVER_RADIUS-2,
 		     BACKGROUND);
 #endif
+
+  const Box *dowBox = NULL;
+  const Box *dateBox = NULL;
+  usableBoxes(&dowBox, &dateBox);
+
+  if (dowBox) {
+    drawDayOfWeek(dowBox);
+  }
+  if (dateBox) {
+    drawDate(dateBox);
+  }
 }
 
 /*
@@ -110,6 +127,7 @@ void Smart::drawWatchFace(){
    angle is in degrees (of a 360° circle), with 0° at the 3 o'clock
    position (no rotation) going clockwise for positive angles.
  */
+#define DEBUG_DRAWMULTILINE 0
 void Smart::drawMultiLine(const multiline_t *line , uint numPoints, float angle) {
   float radians = PI * angle / 180;
   float cosval = cos(radians);
@@ -121,7 +139,7 @@ void Smart::drawMultiLine(const multiline_t *line , uint numPoints, float angle)
   int last_x = ROTX;
   int last_y = ROTY;
 
-#if SERIAL_DEBUG && 0
+#if SERIAL_DEBUG && DEBUG_DRAWMULTILINE
   Serial.print("drawMultiLine: ");
   Serial.print(" - (");
   Serial.print(last_x);
@@ -134,7 +152,7 @@ void Smart::drawMultiLine(const multiline_t *line , uint numPoints, float angle)
     int x = ROTX;
     int y = ROTY;
 
-#if SERIAL_DEBUG && 0
+#if SERIAL_DEBUG && DEBUG_DRAWMULTILINE
     Serial.print("point ");
     Serial.print(p);
     Serial.print(": (");
@@ -192,4 +210,141 @@ void Smart::drawMinuteHand() {
   drawMultiLine(minute_hand,
 		sizeof(minute_hand)/sizeof(multiline_t)/2,
 		minuteHandAngle);
+}
+
+// Boxes where we can place text
+//
+// Described in decreasing order of preference
+//
+// To get the coordinates (and a visual guide), make the "Zone1" though
+// "Zone6" layers visible in watchface-pixmap.svg (don't forget to make
+// them invisible again before saving - otherwise they will appear on
+// the watch face!)
+const Box boxes[] =
+  {
+    {"top box, centered", {65, 40}, {135, 65}, {minute2angle(52), minute2angle(8)}},
+    {"bottom box, centered", {65, 135}, {135, 160}, {minute2angle(22), minute2angle(38)}},
+
+    {"upper left box", {25, 65}, {95, 90}, {minute2angle(45), minute2angle(0)}},
+    {"upper right box", {105, 65}, {175, 90}, {minute2angle(0), minute2angle(15)}},
+
+    {"lower left box", {25, 110}, {95, 135}, {minute2angle(30), minute2angle(45)}},
+    {"lower right box", {105, 110}, {175, 135}, {minute2angle(15), minute2angle(30)}},
+  };
+
+#define num_boxes (sizeof(boxes)/(sizeof(Box)))
+
+/*
+  Find two boxes we can place text in.
+
+  This finds two boxes which are NOT covered by the watch hands.
+ */
+#define DEBUG_USABLEBOXES 0
+void Smart::usableBoxes(const Box **box1, const Box **box2) {
+  const Box *thebox;
+  int boxno;
+
+  *box1 = NULL;
+  *box2 = NULL;
+  for (boxno=0, thebox=boxes;
+       boxno < num_boxes;
+       thebox++, boxno++) {
+    int usable = 1; // assume usable until we find out otherwise
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+    Serial.print("Examining box: "); Serial.println(thebox->name);
+#endif
+    if (thebox->exclude_angles.min > thebox->exclude_angles.max) {
+      // covers the zero angle
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+      Serial.println("Covers the zero angle.");
+#endif
+      if (hourHandAngle >= thebox->exclude_angles.min || hourHandAngle <= thebox->exclude_angles.max)
+	usable = 0;
+      if (minuteHandAngle >= thebox->exclude_angles.min || minuteHandAngle <= thebox->exclude_angles.max)
+	usable = 0;
+    } else {
+      if (hourHandAngle >= thebox->exclude_angles.min && hourHandAngle <= thebox->exclude_angles.max)
+	usable = 0;
+      if (minuteHandAngle >= thebox->exclude_angles.min && minuteHandAngle <= thebox->exclude_angles.max)
+	usable = 0;
+    }
+
+    if (usable) {
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+      Serial.println("Box is usable");
+#endif
+      if (*box1 == NULL) {
+	*box1 = thebox;
+      } else {
+	*box2 = thebox;
+	return; // as soon as we find 2 free boxes, we're done!
+      }
+    }
+  }
+}
+
+const char *weekDays[] = {
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+};
+
+void Smart::drawDayOfWeek(const Box *box) {
+  drawText(weekDays[currentTime.Wday-1], &FreeSansBold12pt7b, box);
+}
+
+const char *months[] = {
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+};
+
+void Smart::drawDate(const Box *box) {
+  char text[10];
+  sprintf(text, "%d %s", currentTime.Day, months[currentTime.Month-1]);
+  drawText(text, &FreeSansBold9pt7b, box);
+}
+
+void Smart::drawText(const char *text, const GFXfont *font, const Box *box) {
+  int16_t xOffset, yOffset;
+  uint16_t textWidth, textHeight;
+
+  display.setFont(font);
+  display.getTextBounds(text, 0, 0, &xOffset, &yOffset, &textWidth, &textHeight);
+
+  // Center the text inside the box
+  int boxWidth = box->botright.x - box->topleft.x;
+  int boxHeight = box->botright.y - box->topleft.y;
+
+  int x = box->topleft.x + (boxWidth-textWidth)/2 - xOffset;
+  int y = box->topleft.y + (boxHeight-textHeight)/2 - yOffset;
+
+#if SERIAL_DEBUG && 0
+  // Give a visual indication of the box
+  display.drawRect(box->topleft.x, box->topleft.y,
+		   boxWidth, boxHeight,
+		   FOREGROUND);
+  Serial.print("Text: "); Serial.println(text);
+  Serial.print("xOffset: "); Serial.print(xOffset); Serial.print(" yOffset:"); Serial.println(yOffset);
+  Serial.print("Text width: "); Serial.println(textWidth);
+  Serial.print("Text height: "); Serial.println(textHeight);
+  Serial.print("Box name: "); Serial.println(box->name);
+  Serial.print("Pos: "); Serial.print(x); Serial.print(", "); Serial.println(y);
+#endif
+
+  display.setCursor(x, y);
+  display.print(text);
 }

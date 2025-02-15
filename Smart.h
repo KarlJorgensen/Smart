@@ -24,6 +24,28 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 // This must be a signed type as coordinates may be negative
 #define multiline_t int8_t
 
+// Describes a box we can put text in, and an "exclusion zone": If any
+// watch hand is inside this exclusion zone, the box is considered
+// "covered" and thus not usable.
+typedef struct {
+  const char *name;
+  struct {
+    int16_t x;
+    int16_t y;
+  } topleft;
+  struct {
+    int16_t x;
+    int16_t y;
+  } botright;
+  // The range of angles for the exclusion zone.
+  // If min > max, this means that the area includes the 0° angle
+  // These angles must be normalised - i.e. in the range of [0..359]
+  struct {
+    float min;
+    float max;
+  } exclude_angles;
+} Box;
+
 class Smart : public Watchy{
   using Watchy::Watchy;
 public:
@@ -32,6 +54,10 @@ protected:
   void drawMultiLine(const multiline_t *line , uint numPoints, float angle);
   void drawHourHand();
   void drawMinuteHand();
+  void drawDayOfWeek(const Box *box);
+  void drawDate(const Box *box);
+  void drawText(const char *text, const GFXfont *font, const Box *box);
+  void usableBoxes(const Box **box1, const Box **box2);
 
   float hourHandAngle;
   float minuteHandAngle;

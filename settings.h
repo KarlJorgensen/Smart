@@ -54,7 +54,9 @@
 // Speed of the serial line
 //
 // This is only used if SERIAL_DEBUG or SCREENSHOT_MODE is set
-#define SERIAL_SPEED 9600
+//
+// This should match SERIAL_SPEED in Makefile
+#define SERIAL_SPEED 921600
 
 // Screenshot mode
 //
