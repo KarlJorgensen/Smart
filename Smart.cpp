@@ -17,12 +17,29 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 
 #include "Smart.h"
 
-int minute2angle(int minute) {
-  return 6 * ((int)minute - 15);
+int normaliseAngle(int angle) {
+  angle = angle % 360;
+  while (angle < 0)
+    angle += 360;
+  while (angle >= 360)
+    angle -= 360;
+  return angle;
 }
 
+/* Convert a minute into an angle.
+
+   0° is at 3 o'clock. Return value is normalised to [0..359]
+ */
+int minute2angle(int minute) {
+  return normaliseAngle(6 * ((int)minute - 15));
+}
+
+/* Convert an hour into an angle.
+
+   0° is at 3 o'clock. Return value is normalised to [0..359]
+ */
 int hour2angle(int hour) {
-  return 30 * ( (hour-3) % 12);
+  return normaliseAngle(30 * ( (hour-3) % 12));
 }
 
 #include "watchface-pixmap.h"
