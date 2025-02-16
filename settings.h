@@ -55,8 +55,11 @@
 //
 // This is only used if SERIAL_DEBUG or SCREENSHOT_MODE is set
 //
+// If this is set too high, you may occasionally lose output, which
+// makes for corrupted screen shots :-(
+//
 // This should match SERIAL_SPEED in Makefile
-#define SERIAL_SPEED 921600
+#define SERIAL_SPEED 57600
 
 // Screenshot mode
 //

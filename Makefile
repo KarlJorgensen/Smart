@@ -13,7 +13,7 @@ IMAGES = $(PIXMAP_HEADERS:%.h=%.xbm)  $(PIXMAP_HEADERS:%.h=%.png)
 SERIAL_PORT=/dev/ttyACM0
 
 # SERIAL_RATE should match SERIAL_SPEED in settings.h
-SERIAL_RATE=921600
+SERIAL_RATE=57600
 
 .PHONY: verify
 verify: dirs $(HEADERS)
