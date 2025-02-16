@@ -7,7 +7,7 @@ BUILD_CACHE = /tmp/cache
 LINE_HEADERS = hour_hand-lines.h minute_hand-lines.h
 PIXMAP_HEADERS = watchface-pixmap.h
 
-HEADERS = $(LINE_HEADERS) $(PIXMAP_HEADERS)
+HEADERS = $(LINE_HEADERS) $(PIXMAP_HEADERS) boxes.h
 IMAGES = $(PIXMAP_HEADERS:%.h=%.xbm)  $(PIXMAP_HEADERS:%.h=%.png)
 
 SERIAL_PORT=/dev/ttyACM0
@@ -73,6 +73,12 @@ headers : $(HEADERS)
 %-pixmap.h : %-pixmap.xbm Makefile
 	rm -f $@
 	sed < $< -e 's/noname/$*/g' -e 's/static char/static PROGMEM const uint8_t/' > $@.new
+	chmod -w $@.new
+	mv -f $@.new $@
+
+boxes.h : watchface-pixmap.svg svg2boxes.py
+	rm -f $@
+	./svg2boxes.py $< > $@.new
 	chmod -w $@.new
 	mv -f $@.new $@
 

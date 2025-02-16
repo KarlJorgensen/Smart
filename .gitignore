@@ -15,5 +15,6 @@ __pycache__/
 *-pixmap.h
 *-pixmap.png
 *-pixmap.xbm
+boxes.h
 README.html
 README-development.html

@@ -212,27 +212,7 @@ void Smart::drawMinuteHand() {
 		minuteHandAngle);
 }
 
-// Boxes where we can place text
-//
-// Described in decreasing order of preference
-//
-// To get the coordinates (and a visual guide), make the "Zone1" though
-// "Zone6" layers visible in watchface-pixmap.svg (don't forget to make
-// them invisible again before saving - otherwise they will appear on
-// the watch face!)
-const Box boxes[] =
-  {
-    {"top box, centered", {65, 25}, {135, 50}, {minute2angle(54), minute2angle(11)}},
-    {"bottom box, centered", {65, 150}, {135, 175}, {minute2angle(19), minute2angle(36)}},
-
-    {"upper left box", {25, 65}, {95, 90}, {minute2angle(45), minute2angle(0)}},
-    {"upper right box", {105, 65}, {175, 90}, {minute2angle(0), minute2angle(15)}},
-
-    {"lower left box", {25, 110}, {95, 135}, {minute2angle(30), minute2angle(45)}},
-    {"lower right box", {105, 110}, {175, 135}, {minute2angle(15), minute2angle(30)}},
-  };
-
-#define num_boxes (sizeof(boxes)/(sizeof(Box)))
+#include "boxes.h"
 
 /*
   Find two boxes we can place text in.

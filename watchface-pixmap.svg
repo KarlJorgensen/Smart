@@ -30,15 +30,15 @@
      showgrid="true"
      shape-rendering="crispEdges"
      showguides="true"
-     inkscape:zoom="4.8931789"
-     inkscape:cx="95.643345"
-     inkscape:cy="108.51841"
+     inkscape:zoom="3.46"
+     inkscape:cx="92.48555"
+     inkscape:cy="109.53757"
      inkscape:window-width="1080"
-     inkscape:window-height="1027"
+     inkscape:window-height="907"
      inkscape:window-x="1920"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer7">
+     inkscape:current-layer="layer8">
     <inkscape:grid
        type="xygrid"
        id="grid25"
@@ -320,10 +320,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9160"
-       x="-0.095435429"
-       y="-0.090309746"
-       width="1.2215548"
-       height="1.221555">
+       x="-0.095435483"
+       y="-0.090309693"
+       width="1.2215549"
+       height="1.2215549">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9158" />
@@ -334,10 +334,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9164"
-       x="-0.1312451"
-       y="-0.12611929"
-       width="1.2215547"
-       height="1.2215546">
+       x="-0.13124518"
+       y="-0.12611947"
+       width="1.2215548"
+       height="1.2215548">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9162" />
@@ -348,9 +348,9 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9168"
-       x="-0.13124511"
-       y="-0.095435398"
-       width="1.221555"
+       x="-0.13124522"
+       y="-0.095435483"
+       width="1.2215549"
        height="1.2215549">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
@@ -362,10 +362,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9172"
-       x="-0.095435232"
-       y="-0.13124509"
-       width="1.2215545"
-       height="1.2215549">
+       x="-0.095435431"
+       y="-0.13124522"
+       width="1.221555"
+       height="1.221555">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9170" />
@@ -379,7 +379,7 @@
        x="-0.12611962"
        y="-0.13124518"
        width="1.221555"
-       height="1.2215552">
+       height="1.221555">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9174" />
@@ -390,10 +390,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9180"
-       x="-0.09030986"
-       y="-0.095435252"
-       width="1.2215549"
-       height="1.2215547">
+       x="-0.090309808"
+       y="-0.095435426"
+       width="1.221555"
+       height="1.221555">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9178" />
@@ -434,8 +434,8 @@
        id="filter9192"
        x="-0.066666667"
        y="-0.13874259"
-       width="1.2774853"
-       height="1.2774853">
+       width="1.2774852"
+       height="1.2774852">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9190" />
@@ -446,10 +446,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9196"
-       x="-0.13874256"
-       y="-0.21081881"
-       width="1.2774853"
-       height="1.2774855">
+       x="-0.1387426"
+       y="-0.21081853"
+       width="1.2774852"
+       height="1.2774852">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9194" />
@@ -460,9 +460,9 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9200"
-       x="-0.2108183"
+       x="-0.21081849"
        y="-0.13874258"
-       width="1.277485"
+       width="1.2774852"
        height="1.2774852">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
@@ -476,8 +476,8 @@
        id="filter9204"
        x="-0.13156412"
        y="-0.055555556"
-       width="1.2631283"
-       height="1.263128">
+       width="1.2631282"
+       height="1.2631282">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9202" />
@@ -554,7 +554,7 @@
     </filter>
   </defs>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="WatchFace"
      inkscape:groupmode="layer"
      id="layer1"
      sodipodi:insensitive="true">
@@ -771,192 +771,56 @@
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Zone1"
-     style="display:none">
-    <path
-       style="opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path4208"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="4.0881552"
-       sodipodi:end="5.3297096"
-       sodipodi:arc-type="slice"
-       d="M 50.319563,31.030048 A 85,85 0 0 1 149.20245,30.68825 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;display:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       x="104"
-       y="86"
-       id="text3196"
-       inkscape:label="Date"><tspan
-         sodipodi:role="line"
-         id="tspan3198"
-         x="0"
-         y="0">14 Feb</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;display:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       x="45"
-       y="60"
-       id="text2090"
-       inkscape:label="DayOfWeek"><tspan
-         sodipodi:role="line"
-         id="tspan2100"
-         x="0"
-         y="0">Fri</tspan></text>
+     id="layer8"
+     inkscape:label="Boxes"
+     style="display:inline">
     <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect3252"
        width="70"
        height="25"
        x="65"
        y="25"
-       inkscape:label="Box" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer3"
-     inkscape:label="Zone2"
-     style="display:none">
+       inkscape:label="Box-Top" />
     <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.659381;stroke-linecap:square;stroke-dasharray:2.63753, 0.659381;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4202"
-       width="70"
-       height="25"
-       x="25"
-       y="65"
-       inkscape:label="Box" />
-    <path
-       style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path5001"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="3.1384351"
-       sodipodi:end="4.7157553"
-       sodipodi:arc-type="slice"
-       d="M 15.000424,100.26839 A 85,85 0 0 1 39.902198,39.88965 85,85 0 0 1 100.28614,15.000482 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="Zone3"
-     style="display:none">
-    <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.659381;stroke-linecap:square;stroke-dasharray:2.63753, 0.659381;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4200"
-       width="70"
-       height="25"
-       x="105"
-       y="65"
-       inkscape:label="Box" />
-    <path
-       style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path5006"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="4.711457"
-       sodipodi:end="0.0052783759"
-       sodipodi:arc-type="slice"
-       d="m 99.920782,15.000037 a 85,85 0 0 1 60.313768,25.026646 85,85 0 0 1 24.76427,60.421977 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer5"
-     inkscape:label="Zone4"
-     style="display:none">
-    <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.659381;stroke-linecap:square;stroke-dasharray:2.63753, 0.659381;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4206"
-       width="70"
-       height="25"
-       x="25"
-       y="110"
-       inkscape:label="Box" />
-    <path
-       style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path5011"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="1.5719757"
-       sodipodi:end="3.1379946"
-       sodipodi:arc-type="slice"
-       d="M 99.899753,184.99994 A 85,85 0 0 1 15.00055,100.30583 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer6"
-     inkscape:label="Zone5"
-     style="display:none">
-    <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.659381;stroke-linecap:square;stroke-dasharray:2.63753, 0.659381;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4204"
-       width="70"
-       height="25"
-       x="105"
-       y="110"
-       inkscape:label="Box" />
-    <path
-       style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path5089"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="0.00011733917"
-       sodipodi:end="1.5674116"
-       sodipodi:arc-type="slice"
-       d="m 185,100.00997 a 85,85 0 0 1 -84.7123,84.98954 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7"
-     inkscape:label="Zone6"
-     style="display:none">
-    <rect
-       style="display:inline;fill:none;stroke:#aeaeae;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4198"
        width="70"
        height="24.999992"
        x="65"
        y="150"
-       inkscape:label="Box" />
-    <path
-       style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
-       id="path5092"
-       sodipodi:type="arc"
-       sodipodi:cx="100"
-       sodipodi:cy="100"
-       sodipodi:rx="85"
-       sodipodi:ry="85"
-       sodipodi:start="0.94557757"
-       sodipodi:end="2.1890384"
-       sodipodi:arc-type="slice"
-       d="m 149.74835,168.92098 a 85,85 0 0 1 -99.01465,0.3454 L 100,100 Z"
-       inkscape:label="exclusion"
-       sodipodi:insensitive="true" />
+       inkscape:label="Box-Bottom" />
+    <rect
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4202"
+       width="75"
+       height="30"
+       x="20"
+       y="65"
+       inkscape:label="Box-TopLeft" />
+    <rect
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4200"
+       width="75"
+       height="30"
+       x="105"
+       y="65"
+       inkscape:label="Box-TopRight" />
+    <rect
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4206"
+       width="75"
+       height="30"
+       x="20"
+       y="105"
+       inkscape:label="Box-BotLeft" />
+    <rect
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4204"
+       width="75"
+       height="30"
+       x="105"
+       y="105"
+       inkscape:label="Box-BotRight" />
   </g>
 </svg>
