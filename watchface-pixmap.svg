@@ -30,9 +30,9 @@
      showgrid="true"
      shape-rendering="crispEdges"
      showguides="true"
-     inkscape:zoom="3.46"
-     inkscape:cx="92.48555"
-     inkscape:cy="109.53757"
+     inkscape:zoom="9.7863578"
+     inkscape:cx="107.59876"
+     inkscape:cy="43.019069"
      inkscape:window-width="1080"
      inkscape:window-height="907"
      inkscape:window-x="1920"
@@ -775,18 +775,18 @@
      inkscape:label="Boxes"
      style="display:inline">
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.721277;stroke-linecap:square;stroke-dasharray:2.88511, 0.721277;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect3252"
-       width="70"
-       height="25"
-       x="65"
-       y="25"
+       width="69.938103"
+       height="29.94035"
+       x="65.030945"
+       y="20.028704"
        inkscape:label="Box-Top" />
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.65938;stroke-linecap:square;stroke-dasharray:2.63752, 0.65938;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.722315;stroke-linecap:square;stroke-dasharray:2.88926, 0.722315;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4198"
        width="70"
-       height="24.999992"
+       height="29.99999"
        x="65"
        y="150"
        inkscape:label="Box-Bottom" />
@@ -796,7 +796,7 @@
        width="75"
        height="30"
        x="20"
-       y="65"
+       y="60"
        inkscape:label="Box-TopLeft" />
     <rect
        style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -804,7 +804,7 @@
        width="75"
        height="30"
        x="105"
-       y="65"
+       y="60"
        inkscape:label="Box-TopRight" />
     <rect
        style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -812,7 +812,7 @@
        width="75"
        height="30"
        x="20"
-       y="105"
+       y="110"
        inkscape:label="Box-BotLeft" />
     <rect
        style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
@@ -820,7 +820,7 @@
        width="75"
        height="30"
        x="105"
-       y="105"
+       y="110"
        inkscape:label="Box-BotRight" />
   </g>
 </svg>
