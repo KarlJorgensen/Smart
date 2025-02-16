@@ -23,6 +23,9 @@ couple of respects:
    analogue watch (but only once per minute). A little fun with
    trigonometry was needed.
 
+ * The text is placed to avoid overlaps with the watch hands. Over
+   time, you will see the text "move around" as a result.
+
 # Building It #
 
 To build this, you will need a few things installed:
@@ -62,9 +65,8 @@ To build this, you will need a few things installed:
  * [imagemagick](https://imagemagick.org): The compilation process
    uses it to convert raster images to various formats.
    
- * [python](https://www.python.org/): There is a custom python script
-   (`svg2multiline.py`) to convert the watch hand SVGs into line
-   drawing coordinates. Probably needs python 3.
+ * [python](https://www.python.org/): There are a couple of custom
+   python scripts used in the build. Probably needs python 3.
 
  * The source code. You are probably looking at in Github, and they
    have directions on how to get a copy.

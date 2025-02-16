@@ -2,7 +2,7 @@
 
 You probably want to customise your watch. Here are a few things to beware of.
 
-The watch face consists of 3 parts, which are edited separately:
+The watch face consists a few parts:
 
  * The code - see `Smart.cpp` for details - should be pretty vanilla
    for Arduino folks.
@@ -12,6 +12,8 @@ The watch face consists of 3 parts, which are edited separately:
    
  * The hour & minute hands: Line drawings which are rotated, scaled
    and placed at run-time. Lots of lovely trigonometry involved.
+
+ * The day-of-week and date: Shown as text on the watch face.
 
 ## The Static Watch Face ##
 
@@ -110,9 +112,56 @@ When the hand is drawn at run-time it will rotated to the correct
 position.
 
 Remember that positions other than 3/6/9/12 o'clock will thus
-unavoidably introduce "jaggered" lines. So the perceived thickness of
+unavoidably introduce "jagged" lines. So the perceived thickness of
 lines may be different at different angles, which affects the
 "look". Be sure to test the layout.
+
+## Placing Text ##
+
+The day-of-week and date will be displayed on the watch face.  The
+positions of this text is not fixed: we want to avoid the watch hands
+getting in the way of the text.
+
+The logic:
+
+ * The _possible_ positions of text is defined by rectangles in
+   `watchface-pixmap.svg` - any rectangle with an `inkscape:label`
+   that starts with "Box" will be treated as a possible target to
+   position text.
+
+ * `svg2boxes.py` will convert this into C++ code (`boxes.h`) which
+   describes each box and an "exclusion zone" (described in
+   angles). Unless the hands are quite "thick", this ensures that text
+   and watch hands do not overlap. (If your hands are "thick" then you
+   may want to make the boxes larger)
+
+ * The order of the boxes matter: They are described in order of
+   decreasing preference. In Inkscape, the depth ordering is used to
+   describe the preferences: The box at the bottom is the most
+   preferred one, the top-most box is the least preferred one.
+
+ * At run-time, the code will figure out which boxes are usable based
+   on the current angle of the watch hands and the exclusion zone for
+   the boxes.  The day-of-week goes into the first usable box, and the
+   date into the 2nd. (If only one box is usable, the date will not be
+   displayed.)
+
+ * Boxes should not overlap; doing this could result in overlapping
+   text.
+
+ * Text will be placed in the _center_ of the box. If the box is too
+   small, the text will overflow (and might look ugly).
+
+ * Font selection is hard-coded and should somewhat "fit" the height
+   of the boxes.
+   
+ * The length of each text label is pretty constant; this should "fit"
+   the width of the boxes.
+
+For convenience, the boxes in `watchface-pixmap.svg` are defined with
+no fill and a very light grey stroke; this ensures that they will not
+be visible in the resulting watch face - the watch face is strictly
+black-and-white.
 
 # Getting Screenshots #
 
@@ -124,7 +173,7 @@ It takes a couple of steps:
  * Modify `settings.h` and
 
    * set `SCREENSHOT_MODE` to a nonzero value
-   * set `SCREENSHOT_HOUR` and `SCREENSHOT_MINUTE` to the time you
+   * set `SCREENSHOT_HOUR`, `SCREENSHOT_MINUTE` etc to the time you
      want the face to show.
    * set `SERIAL_SPEED` to your desired serial port baud rate
 

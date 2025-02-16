@@ -54,7 +54,12 @@
 // Speed of the serial line
 //
 // This is only used if SERIAL_DEBUG or SCREENSHOT_MODE is set
-#define SERIAL_SPEED 9600
+//
+// If this is set too high, you may occasionally lose output, which
+// makes for corrupted screen shots :-(
+//
+// This should match SERIAL_SPEED in Makefile
+#define SERIAL_SPEED 57600
 
 // Screenshot mode
 //
@@ -73,6 +78,10 @@
 //
 // The "classic" watch face is 10:08 +/- a couple of minutes.
 #define SCREENSHOT_HOUR 10
-#define SCREENSHOT_MINUTE 8
+#define SCREENSHOT_MINUTE 9
+#define SCREENSHOT_YEAR 1968
+#define SCREENSHOT_MONTH 9 /* Sep */
+#define SCREENSHOT_DAY 15
+#define SCREENSHOT_DOW 1 /* Sunday */
 
 #endif
