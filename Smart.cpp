@@ -49,10 +49,17 @@ void Smart::drawWatchFace(){
 #if SCREENSHOT_MODE
   currentTime.Hour = SCREENSHOT_HOUR;
   currentTime.Minute = SCREENSHOT_MINUTE;
+  currentTime.Wday = SCREENSHOT_DOW;
+  currentTime.Month = SCREENSHOT_MONTH;
+  currentTime.Day = SCREENSHOT_DAY;
+  currentTime.Year = CalendarYrToTm(SCREENSHOT_YEAR);
 #endif
-#if SERIAL_DEBUG
+#if SERIAL_DEBUG || SCREENSHOT_MODE
   char debug_time[30];
-  sprintf(debug_time, "\nTime: %02d:%02d", currentTime.Hour, currentTime.Minute);
+  // Emit current date/time. Yes: US date format is evil, so we use a normal one.
+  sprintf(debug_time, "\nDate: %d/%d/%d Time: %02d:%02d",
+	  tmYearToCalendar(currentTime.Year), currentTime.Month, currentTime.Day,
+	  currentTime.Hour, currentTime.Minute);
   Serial.println(debug_time);
 #endif
   display.fillScreen(BACKGROUND);

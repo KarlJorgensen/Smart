@@ -78,6 +78,10 @@
 //
 // The "classic" watch face is 10:08 +/- a couple of minutes.
 #define SCREENSHOT_HOUR 10
-#define SCREENSHOT_MINUTE 8
+#define SCREENSHOT_MINUTE 9
+#define SCREENSHOT_YEAR 1968
+#define SCREENSHOT_MONTH 9 /* Sep */
+#define SCREENSHOT_DAY 15
+#define SCREENSHOT_DOW 1 /* Sunday */
 
 #endif

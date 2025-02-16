@@ -173,7 +173,7 @@ It takes a couple of steps:
  * Modify `settings.h` and
 
    * set `SCREENSHOT_MODE` to a nonzero value
-   * set `SCREENSHOT_HOUR` and `SCREENSHOT_MINUTE` to the time you
+   * set `SCREENSHOT_HOUR`, `SCREENSHOT_MINUTE` etc to the time you
      want the face to show.
    * set `SERIAL_SPEED` to your desired serial port baud rate
 
