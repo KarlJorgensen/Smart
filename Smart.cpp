@@ -17,7 +17,7 @@ with Smart. If not, see <https://www.gnu.org/licenses/>.
 
 #include "Smart.h"
 #include <Fonts/FreeSansBold12pt7b.h>
-#include <Fonts/FreeSansBold9pt7b.h>
+#include <Fonts/FreeSans9pt7b.h>
 
 int normaliseAngle(float angle) {
   while (angle < 0)
@@ -222,8 +222,8 @@ void Smart::drawMinuteHand() {
 // the watch face!)
 const Box boxes[] =
   {
-    {"top box, centered", {65, 40}, {135, 65}, {minute2angle(52), minute2angle(8)}},
-    {"bottom box, centered", {65, 135}, {135, 160}, {minute2angle(22), minute2angle(38)}},
+    {"top box, centered", {65, 25}, {135, 50}, {minute2angle(54), minute2angle(11)}},
+    {"bottom box, centered", {65, 150}, {135, 175}, {minute2angle(19), minute2angle(36)}},
 
     {"upper left box", {25, 65}, {95, 90}, {minute2angle(45), minute2angle(0)}},
     {"upper right box", {105, 65}, {175, 90}, {minute2angle(0), minute2angle(15)}},
@@ -315,7 +315,7 @@ const char *months[] = {
 void Smart::drawDate(const Box *box) {
   char text[10];
   sprintf(text, "%d %s", currentTime.Day, months[currentTime.Month-1]);
-  drawText(text, &FreeSansBold9pt7b, box);
+  drawText(text, &FreeSans9pt7b, box);
 }
 
 void Smart::drawText(const char *text, const GFXfont *font, const Box *box) {

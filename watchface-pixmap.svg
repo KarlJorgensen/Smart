@@ -32,13 +32,13 @@
      showguides="true"
      inkscape:zoom="4.8931789"
      inkscape:cx="95.643345"
-     inkscape:cy="108.10968"
+     inkscape:cy="108.51841"
      inkscape:window-width="1080"
-     inkscape:window-height="1087"
+     inkscape:window-height="1027"
      inkscape:window-x="1920"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer7">
     <inkscape:grid
        type="xygrid"
        id="grid25"
@@ -782,10 +782,10 @@
        sodipodi:cy="100"
        sodipodi:rx="85"
        sodipodi:ry="85"
-       sodipodi:start="3.9209737"
-       sodipodi:end="5.5020199"
+       sodipodi:start="4.0881552"
+       sodipodi:end="5.3297096"
        sodipodi:arc-type="slice"
-       d="M 39.535361,40.258663 A 85,85 0 0 1 99.924165,15.000034 85,85 0 0 1 160.35794,40.150867 L 100,100 Z"
+       d="M 50.319563,31.030048 A 85,85 0 0 1 149.20245,30.68825 L 100,100 Z"
        inkscape:label="exclusion"
        sodipodi:insensitive="true" />
     <text
@@ -816,7 +816,7 @@
        width="70"
        height="25"
        x="65"
-       y="40"
+       y="25"
        inkscape:label="Box" />
   </g>
   <g
@@ -942,7 +942,7 @@
        width="70"
        height="24.999992"
        x="65"
-       y="135"
+       y="150"
        inkscape:label="Box" />
     <path
        style="display:inline;opacity:0.430054;fill:#7e7e7e;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:square;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter9208)"
@@ -952,10 +952,10 @@
        sodipodi:cy="100"
        sodipodi:rx="85"
        sodipodi:ry="85"
-       sodipodi:start="0.77213783"
-       sodipodi:end="2.3600155"
+       sodipodi:start="0.94557757"
+       sodipodi:end="2.1890384"
        sodipodi:arc-type="slice"
-       d="m 160.89577,159.30182 a 85,85 0 0 1 -60.4946,25.69723 85,85 0 0 1 -60.734465,-25.12507 L 100,100 Z"
+       d="m 149.74835,168.92098 a 85,85 0 0 1 -99.01465,0.3454 L 100,100 Z"
        inkscape:label="exclusion"
        sodipodi:insensitive="true" />
   </g>
