@@ -30,12 +30,12 @@
      showgrid="true"
      shape-rendering="crispEdges"
      showguides="true"
-     inkscape:zoom="3.0136966"
-     inkscape:cx="107.84098"
-     inkscape:cy="92.909155"
-     inkscape:window-width="1080"
-     inkscape:window-height="907"
-     inkscape:window-x="1920"
+     inkscape:zoom="3.9405941"
+     inkscape:cx="100.11181"
+     inkscape:cy="99.984924"
+     inkscape:window-width="1517"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer8">
@@ -320,10 +320,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9160"
-       x="-0.095435483"
-       y="-0.090309693"
-       width="1.2215549"
-       height="1.2215549">
+       x="-0.095435429"
+       y="-0.090309746"
+       width="1.2215548"
+       height="1.221555">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9158" />
@@ -334,10 +334,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9164"
-       x="-0.13124518"
-       y="-0.12611947"
-       width="1.2215548"
-       height="1.2215548">
+       x="-0.1312451"
+       y="-0.12611929"
+       width="1.2215547"
+       height="1.2215546">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9162" />
@@ -348,9 +348,9 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9168"
-       x="-0.13124522"
-       y="-0.095435483"
-       width="1.2215549"
+       x="-0.13124511"
+       y="-0.095435398"
+       width="1.221555"
        height="1.2215549">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
@@ -362,10 +362,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9172"
-       x="-0.095435431"
-       y="-0.13124522"
-       width="1.221555"
-       height="1.221555">
+       x="-0.095435232"
+       y="-0.13124509"
+       width="1.2215545"
+       height="1.2215549">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9170" />
@@ -379,7 +379,7 @@
        x="-0.12611962"
        y="-0.13124518"
        width="1.221555"
-       height="1.221555">
+       height="1.2215552">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9174" />
@@ -390,10 +390,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9180"
-       x="-0.090309808"
-       y="-0.095435426"
-       width="1.221555"
-       height="1.221555">
+       x="-0.09030986"
+       y="-0.095435252"
+       width="1.2215549"
+       height="1.2215547">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9178" />
@@ -434,8 +434,8 @@
        id="filter9192"
        x="-0.066666667"
        y="-0.13874259"
-       width="1.2774852"
-       height="1.2774852">
+       width="1.2774853"
+       height="1.2774853">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9190" />
@@ -446,10 +446,10 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9196"
-       x="-0.1387426"
-       y="-0.21081853"
-       width="1.2774852"
-       height="1.2774852">
+       x="-0.13874256"
+       y="-0.21081881"
+       width="1.2774853"
+       height="1.2774855">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9194" />
@@ -460,9 +460,9 @@
        inkscape:menu-tooltip="Reduce or remove antialiasing around shapes"
        style="color-interpolation-filters:sRGB;"
        id="filter9200"
-       x="-0.21081849"
+       x="-0.2108183"
        y="-0.13874258"
-       width="1.2774852"
+       width="1.277485"
        height="1.2774852">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
@@ -476,8 +476,8 @@
        id="filter9204"
        x="-0.13156412"
        y="-0.055555556"
-       width="1.2631282"
-       height="1.2631282">
+       width="1.2631283"
+       height="1.263128">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1000 -500 "
          id="feColorMatrix9202" />
@@ -791,35 +791,35 @@
        y="150"
        inkscape:label="Box-Bottom" />
     <rect
-       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.722316;stroke-linecap:square;stroke-dasharray:2.88926, 0.722316;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4206"
-       width="75"
+       width="70"
        height="30"
        x="20"
        y="110"
        inkscape:label="Box-BotLeft" />
     <rect
-       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.722316;stroke-linecap:square;stroke-dasharray:2.88926, 0.722316;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4202"
-       width="75"
+       width="70"
        height="30"
        x="20"
        y="60"
        inkscape:label="Box-TopLeft" />
     <rect
-       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.722316;stroke-linecap:square;stroke-dasharray:2.88926, 0.722316;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4200"
-       width="75"
+       width="70"
        height="30"
-       x="105"
+       x="110"
        y="60"
        inkscape:label="Box-TopRight" />
     <rect
-       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.722316;stroke-linecap:square;stroke-dasharray:2.88926, 0.722316;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4204"
-       width="75"
+       width="70"
        height="30"
-       x="105"
+       x="110"
        y="110"
        inkscape:label="Box-BotRight" />
   </g>
