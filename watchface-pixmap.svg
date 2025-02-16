@@ -30,9 +30,9 @@
      showgrid="true"
      shape-rendering="crispEdges"
      showguides="true"
-     inkscape:zoom="9.7863578"
-     inkscape:cx="107.59876"
-     inkscape:cy="43.019069"
+     inkscape:zoom="3.0136966"
+     inkscape:cx="107.84098"
+     inkscape:cy="92.909155"
      inkscape:window-width="1080"
      inkscape:window-height="907"
      inkscape:window-x="1920"
@@ -775,7 +775,7 @@
      inkscape:label="Boxes"
      style="display:inline">
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.721277;stroke-linecap:square;stroke-dasharray:2.88511, 0.721277;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.721277;stroke-linecap:square;stroke-dasharray:2.88511, 0.721277;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect3252"
        width="69.938103"
        height="29.94035"
@@ -783,7 +783,7 @@
        y="20.028704"
        inkscape:label="Box-Top" />
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.722315;stroke-linecap:square;stroke-dasharray:2.88926, 0.722315;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.722315;stroke-linecap:square;stroke-dasharray:2.88926, 0.722315;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4198"
        width="70"
        height="29.99999"
@@ -791,23 +791,7 @@
        y="150"
        inkscape:label="Box-Bottom" />
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4202"
-       width="75"
-       height="30"
-       x="20"
-       y="60"
-       inkscape:label="Box-TopLeft" />
-    <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="rect4200"
-       width="75"
-       height="30"
-       x="105"
-       y="60"
-       inkscape:label="Box-TopRight" />
-    <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4206"
        width="75"
        height="30"
@@ -815,7 +799,23 @@
        y="110"
        inkscape:label="Box-BotLeft" />
     <rect
-       style="display:inline;fill:none;stroke:#cecece;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4202"
+       width="75"
+       height="30"
+       x="20"
+       y="60"
+       inkscape:label="Box-TopLeft" />
+    <rect
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4200"
+       width="75"
+       height="30"
+       x="105"
+       y="60"
+       inkscape:label="Box-TopRight" />
+    <rect
+       style="display:inline;fill:none;stroke:#bfbfbf;stroke-width:0.747668;stroke-linecap:square;stroke-dasharray:2.99067, 0.747668;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4204"
        width="75"
        height="30"
