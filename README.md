@@ -68,8 +68,12 @@ To build this, you will need a few things installed:
  * [python](https://www.python.org/): There are a couple of custom
    python scripts used in the build. Probably needs python 3.
 
- * The source code. You are probably looking at in Github, and they
-   have directions on how to get a copy.
+ * The source code. You are probably looking at in
+   [Codeberg](https://codeberg.org/jorginator/Smart) or
+   [Github](https://github.com/KarlJorgensen/Smart), and they have
+   directions on how to get a copy. Both are good sources to get the
+   latest version, although I may move things entirely to Codeberg in
+   the future.
 
  * Patience. The build process is slow. Coffee is optional (but
    desirable as always).
