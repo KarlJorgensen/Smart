@@ -90,16 +90,111 @@ void Smart::drawWatchFace(){
 		     BACKGROUND);
 #endif
 
-  const Box *dowBox = NULL;
-  const Box *dateBox = NULL;
-  usableBoxes(&dowBox, &dateBox);
+  const Box *boxes[2];
+  const Box **boxptr = boxes;
+  usableBoxes(2, boxptr);
 
-  if (dowBox) {
-    drawDayOfWeek(dowBox);
+  if (*boxptr) {
+    drawDayOfWeek(*boxptr);
+    boxptr ++;
+
+    if (*boxptr) {
+      drawDate(*boxptr);
+      boxptr++;
+    }
   }
-  if (dateBox) {
-    drawDate(dateBox);
+}
+
+#include "boxes.h"
+
+/*
+  Find boxes we can place text in.
+
+  This finds boxes which are NOT covered by the watch hands.
+
+  Returns the number of boxes found
+ */
+#define DEBUG_USABLEBOXES 0
+uint Smart::usableBoxes(uint boxes_wanted, const Box **results) {
+  const Box *this_box;
+  int boxno;
+  uint boxes_found=0;
+
+  // zero out the result array first
+  for (int i=0; i < boxes_wanted; i++) {
+    results[i] = NULL;
   }
+
+  for (boxno=0, this_box=boxes;
+       boxno < num_boxes;
+       this_box++, boxno++) {
+
+    if (boxes_wanted == 0)
+      // We have found enough boxes
+      return boxes_found;
+
+    int usable = 1; // assume usable until we find out otherwise
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+    Serial.print("Examining box: "); Serial.println(this_box->name);
+#endif
+    if (this_box->exclude_angles.min > this_box->exclude_angles.max) {
+      // covers the zero angle
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+      Serial.println("Covers the zero angle.");
+#endif
+      if (hourHandAngle >= this_box->exclude_angles.min || hourHandAngle <= this_box->exclude_angles.max)
+	usable = 0;
+      if (minuteHandAngle >= this_box->exclude_angles.min || minuteHandAngle <= this_box->exclude_angles.max)
+	usable = 0;
+    } else {
+      if (hourHandAngle >= this_box->exclude_angles.min && hourHandAngle <= this_box->exclude_angles.max)
+	usable = 0;
+      if (minuteHandAngle >= this_box->exclude_angles.min && minuteHandAngle <= this_box->exclude_angles.max)
+	usable = 0;
+    }
+
+    if (usable) {
+#if SERIAL_DEBUG && DEBUG_USABLEBOXES
+      Serial.println("Box is usable");
+#endif
+      *results = this_box;
+      results ++;
+      boxes_found++;
+      boxes_wanted--;
+    }
+  }
+  return boxes_found;
+}
+
+
+#include "hour_hand-lines.h"
+
+void Smart::drawHourHand() {
+  hourHandAngle = hour2angle(currentTime.Hour) + currentTime.Minute/2.0;
+
+#if SERIAL_DEBUG && 0
+  Serial.print("Hour hand angle: ");
+  Serial.println(hourHandAngle);
+#endif
+
+  drawMultiLine(hour_hand,
+		sizeof(hour_hand)/sizeof(multiline_t)/2,
+		hourHandAngle);
+}
+
+#include "minute_hand-lines.h"
+
+void Smart::drawMinuteHand() {
+  minuteHandAngle = minute2angle(currentTime.Minute);
+
+#if SERIAL_DEBUG && 0
+  Serial.print("Minute hand angle: ");
+  Serial.println(minuteHandAngle);
+#endif
+
+  drawMultiLine(minute_hand,
+		sizeof(minute_hand)/sizeof(multiline_t)/2,
+		minuteHandAngle);
 }
 
 /*
@@ -186,87 +281,6 @@ void Smart::drawMultiLine(const multiline_t *line , uint numPoints, float angle)
     last_x = x;
     last_y = y;
     line += 2;
-  }
-}
-
-#include "hour_hand-lines.h"
-
-void Smart::drawHourHand() {
-  hourHandAngle = hour2angle(currentTime.Hour) + currentTime.Minute/2.0;
-
-#if SERIAL_DEBUG && 0
-  Serial.print("Hour hand angle: ");
-  Serial.println(hourHandAngle);
-#endif
-
-  drawMultiLine(hour_hand,
-		sizeof(hour_hand)/sizeof(multiline_t)/2,
-		hourHandAngle);
-}
-
-#include "minute_hand-lines.h"
-
-void Smart::drawMinuteHand() {
-  minuteHandAngle = minute2angle(currentTime.Minute);
-
-#if SERIAL_DEBUG && 0
-  Serial.print("Minute hand angle: ");
-  Serial.println(minuteHandAngle);
-#endif
-
-  drawMultiLine(minute_hand,
-		sizeof(minute_hand)/sizeof(multiline_t)/2,
-		minuteHandAngle);
-}
-
-#include "boxes.h"
-
-/*
-  Find two boxes we can place text in.
-
-  This finds two boxes which are NOT covered by the watch hands.
- */
-#define DEBUG_USABLEBOXES 0
-void Smart::usableBoxes(const Box **box1, const Box **box2) {
-  const Box *thebox;
-  int boxno;
-
-  *box1 = NULL;
-  *box2 = NULL;
-  for (boxno=0, thebox=boxes;
-       boxno < num_boxes;
-       thebox++, boxno++) {
-    int usable = 1; // assume usable until we find out otherwise
-#if SERIAL_DEBUG && DEBUG_USABLEBOXES
-    Serial.print("Examining box: "); Serial.println(thebox->name);
-#endif
-    if (thebox->exclude_angles.min > thebox->exclude_angles.max) {
-      // covers the zero angle
-#if SERIAL_DEBUG && DEBUG_USABLEBOXES
-      Serial.println("Covers the zero angle.");
-#endif
-      if (hourHandAngle >= thebox->exclude_angles.min || hourHandAngle <= thebox->exclude_angles.max)
-	usable = 0;
-      if (minuteHandAngle >= thebox->exclude_angles.min || minuteHandAngle <= thebox->exclude_angles.max)
-	usable = 0;
-    } else {
-      if (hourHandAngle >= thebox->exclude_angles.min && hourHandAngle <= thebox->exclude_angles.max)
-	usable = 0;
-      if (minuteHandAngle >= thebox->exclude_angles.min && minuteHandAngle <= thebox->exclude_angles.max)
-	usable = 0;
-    }
-
-    if (usable) {
-#if SERIAL_DEBUG && DEBUG_USABLEBOXES
-      Serial.println("Box is usable");
-#endif
-      if (*box1 == NULL) {
-	*box1 = thebox;
-      } else {
-	*box2 = thebox;
-	return; // as soon as we find 2 free boxes, we're done!
-      }
-    }
   }
 }
 

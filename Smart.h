@@ -57,7 +57,7 @@ protected:
   void drawDayOfWeek(const Box *box);
   void drawDate(const Box *box);
   void drawText(const char *text, const GFXfont *font, const Box *box);
-  void usableBoxes(const Box **box1, const Box **box2);
+  uint usableBoxes(uint boxes_wanted, const Box **boxes);
 
   float hourHandAngle;
   float minuteHandAngle;
